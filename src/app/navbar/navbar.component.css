@@ -1,12 +1,28 @@
 .navbar {
-    flex: auto;
+    display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     width: 15%;
+    margin-top: 15px;
+    margin-left: 3%;
 }
 
-.button {
+.but {
+    margin-top: 15px;
+    margin-right: 3%;
+}
 
+button {
+    margin: 50px;
+    background-color: orange;
+    color: black;
+    border: 2px solid;
+    border-color: black;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 20px;
+    font-size: 1.25em;
 }
