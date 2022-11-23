@@ -3,3 +3,12 @@ html, body {
     padding: 0;
     background-color: #25273E;
 }
+
+button {
+    background: none;
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
