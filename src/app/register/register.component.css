@@ -1,0 +1,50 @@
+.login {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: fit-content;
+    padding: 1%;
+    text-align: center;
+    box-shadow: -1px 1px 20px 1px orange;
+    background-color: gray;
+}
+
+h1 {
+    margin: 0%;
+    color: gold;
+}
+
+button {
+    font-size: 1.5em;
+    color:  white;
+    margin-top: 10%;
+    background-color: lime;
+    padding: 4%;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: -1px 1px 20px 1px lightblue;
+}
+
+input {
+    margin-top: 5%;
+    padding: 2%;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline orange 2px;
+}
+
+p {
+   color: darkred; 
+}
