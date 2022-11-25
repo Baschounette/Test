@@ -9,6 +9,7 @@ h1 {
 article {
     color: white;
     font-style: italic;
+    text-size-adjust: 12;
 }
 
 .trailer{
