@@ -27,3 +27,7 @@ article {
     width: 20%;
     padding-top: 1%;
 }
+
+.video {
+    display: flex;
+}

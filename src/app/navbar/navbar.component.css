@@ -9,13 +9,13 @@
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@media screen and (max-width : 1280px) {
+@media screen and (max-width : 1600px) {
     .logo {
         width: 200px;
         margin-left: 5%;
     }
 }
-@media screen and (min-width : 1280px) {
+@media screen and (min-width : 1600px) {
     .logo {
         width: 300px;
         margin-left: 5%;
