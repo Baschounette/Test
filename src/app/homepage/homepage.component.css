@@ -1,0 +1,33 @@
+h1 {
+    color: cyan;
+    text-decoration: underline red 2px;
+    text-underline-offset: 4px;
+    text-shadow: #fc0 1px 0 10px;
+
+}
+
+article {
+    color: white;
+    font-style: italic;
+    text-size-adjust: 12;
+}
+
+.trailer{
+    text-align: center;
+}
+
+.world {
+    margin-left: 25.5%;  
+}
+
+.musique {
+    display: flex;
+    align-items: center;
+    margin-left: 40%;
+    width: 20%;
+    padding-top: 1%;
+}
+
+.video {
+    display: flex;
+}

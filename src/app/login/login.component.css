@@ -1,25 +1,24 @@
-.login{
-    background-color: gray;
+.login {
     margin-right: auto;
     margin-left: auto;
     margin-top: 10%;
     border: 1px solid white;
     border-radius: 15px;
-    box-shadow: -1px 1px 20px 1px orange;
     width: fit-content;
     padding: 1%;
     text-align: center;
+    box-shadow: -1px 1px 20px 1px orange;
+    background-color: gray;
 }
 
 h1 {
     margin: 0%;
     color: gold;
-    font-size: 2.5em;
 }
 
 button {
     font-size: 1.5em;
-    color: white;
+    color:  white;
     margin-top: 10%;
     background-color: lime;
     padding: 4%;
@@ -40,12 +39,12 @@ input {
 a {
     color: white;
     text-decoration: none;
-} 
+}
 
 a:hover {
     text-decoration: underline orange 2px;
 }
 
 p {
-    color: darkred;
+   color: darkred; 
 }
