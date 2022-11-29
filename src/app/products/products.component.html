@@ -1,16 +1,18 @@
 <div class="global">
     <h1>Liste des personnages de lol : </h1>
-    <div class="cardGlobal" *ngFor="let product of products">
-        <div class="card">
-            <h2>{{product.name}}</h2>
-            <h3>{{product.type}}</h3>
-            <p>{{product.lore}}</p>
-            <img src="{{product.image}}">
-            <div class="price">
-                <h3>{{product.price}}</h3>
-                <h3>{{product.available}}</h3>
+    <div class="cardGlobal">
+        <div *ngFor="let product of products">
+            <div class="card">
+                <h2>{{product.name}}</h2>
+                <h3>{{product.type}}</h3>
+                <p>{{product.lore}}</p>
+                <img src="{{product.image}}">
+                <div class="price">
+                    <h3>{{product.price}}</h3>
+                    <h3>{{product.available}}</h3>
+                </div>
+                <button class="but">Ajouter au panier</button>
             </div>
-            <button class="but">Ajouter au panier</button>
         </div>
     </div>
 </div>
