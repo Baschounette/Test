@@ -1,0 +1,40 @@
+.global {
+    /* background-color: white; */
+    margin: 5%;
+}
+
+.cardGlobal {
+    /* background-color: red; */
+    margin: 1%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 200px;
+    gap: 5%;
+}   
+
+.card {
+    background-color: purple;
+    height: 100%;
+    /* padding: 1rem; */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+} 
+
+h1, h2, h3, p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    width: 75%;
+    
+}

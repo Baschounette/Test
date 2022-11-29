@@ -44,3 +44,7 @@ li {
     padding: 10px;
     width: fit-content;
 }
+
+label {
+    margin-top: 1%;
+}
