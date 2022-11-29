@@ -13,4 +13,7 @@ export class ProductService {
     return this.http.get('http://localhost:8080/products/allProduct')
   }
   
+  addProductFromService(product: any){
+    return this.http.post('http://localhost:8080/products/addProduct', product)
+  }
 }

@@ -1,0 +1,87 @@
+.addProduct {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    width: fit-content;
+    border: 1px solid white;
+    box-shadow: -1px 1px 20px 1px orange;
+    background-color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+input {
+    padding-top: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+label {
+    margin-top: 1%;
+}
+
+button {
+    color: white;
+    background-color: lime;
+    padding: 3%;
+    margin-top: 4%;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: -1px 1px 20px 1px lightblue;
+}
+h1 {
+    color: gold;
+    font-style: italic;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline orange 2px;
+}
+
+p {
+    color: darkred; 
+}
+
+label {
+    color: darkred;
+    
+}
+
+img {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+img:hover {
+    box-shadow: -1px 1px 20px 1px lightblue;
+}
+
+@media screen and (max-width : 1600px) {
+    .register2 {
+        width: 200px;
+    }
+}
+@media screen and (min-width : 1600px) {
+    .register2 {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width : 1920px) {
+    .register2 {
+        width: 200px;
+    }
+}
+@media screen and (min-width : 1920px) {
+    .register2 {
+        width: 300px;
+    }
+}
