@@ -1,4 +1,4 @@
-<div class="addproduct">
+<div class="addProduct">
     <form>
         <h1 class="titre2">Ajouter un Champion</h1>
         <div>
@@ -34,13 +34,19 @@
         <div>
             <label for="type"> Type de champion </label> 
             <div>
-                <input type="text" placeholder="Saisir le type du champion" name="type" ngModel required>
+                <select [(ngModel)]="ngDropdown" name="type" ngModel required>
+                    <option value="Type du champion">Type du champion</option>
+                    <option value="Assassin">Assassin</option>
+                    <option value="Mage">Mage</option>
+                    <option value="Tireur">Tireur</option>
+                    <option value="Support">Support</option>
+                    <option value="Tank">Tank</option>
+                    <option value="Combattant">Combattant</option>
+                </select>
             </div>
         </div>
     
         <div><button type="submit">Ajouter ce champion</button></div>
 
     </form>
-</div>    
-
-
+</div>   
