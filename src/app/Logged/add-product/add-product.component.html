@@ -1,1 +1,46 @@
-<p>add-product works!</p>
+<div class="addproduct">
+    <form>
+        <h1 class="titre2">Ajouter un Champion</h1>
+        <div>
+            <label for="name"> Nom du champion </label>
+            <div>
+                <input type="text" placeholder="Saisir un nom" name="name" ngModel required>
+            </div>
+        </div>
+        <div>
+            <label for="image"> Image </label>
+            <div>
+                <input type="text" placeholder="Lien de l'image" name="image" ngModel required>
+            </div>
+        </div>
+        <div>
+            <label for="lore"> Lore </label>
+            <div>
+                <input type="text" placeholder="Saisir une description" name="lore" ngModel required>
+            </div>
+        </div>
+        <div>
+            <label for="price"> Price </label> 
+            <div>
+                <input type="number" placeholder="Saisir un prix" name="price" ngModel required>
+            </div>
+        </div>
+        <div>
+            <label for="available"> Disponible ? </label> 
+            <div>
+                <input type="checkbox" name="available" ngModel required>
+            </div>
+        </div>
+        <div>
+            <label for="type"> Type de champion </label> 
+            <div>
+                <input type="text" placeholder="Saisir le type du champion" name="type" ngModel required>
+            </div>
+        </div>
+    
+        <div><button type="submit">Ajouter ce champion</button></div>
+
+    </form>
+</div>    
+
+
