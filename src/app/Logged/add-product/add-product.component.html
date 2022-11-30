@@ -1,5 +1,5 @@
 <div class="addProduct">
-    <form>
+    <form (ngSubmit)="addProduct(product)" #product="ngForm">
         <h1 class="titre2">Ajouter un Champion</h1>
         <div>
             <label for="name"> Nom du champion </label>
