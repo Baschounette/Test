@@ -3,13 +3,15 @@
     <div class="cardGlobal">
         <div *ngFor="let product of products">
             <div class="card">
-                <h2>{{product.name}}</h2>
-                <h3>{{product.type}}</h3>
-                <p>{{product.lore}}</p>
                 <img src="{{product.image}}">
+                <div class="secondcard">
+                    <h2>{{product.name}}</h2>
+                    <h3 class="nomType">{{product.type}}</h3>
+                    <p>{{product.lore}}</p>
+                </div>
                 <div class="price">
-                    <h3>{{product.price}}</h3>
-                    <h3>{{product.available}}</h3>
+                    <h3>{{product.price}} RP</h3>
+                    <h3 [ngClass]="{'available-true' : product.available === true, 'available-false' : product.available === false}">{{product.available}}</h3>
                 </div>
                 <button class="but">Ajouter au panier</button>
             </div>

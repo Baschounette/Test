@@ -17,7 +17,7 @@ export class AddProductComponent implements OnInit {
   ngOnInit(): void {
     
   }
-
+// NgForm = Formulaire d'Angular
   addProduct(product: NgForm){
     this.productService.addProductFromService(product.value).subscribe(() => {
       console.log("Champion ajouté")
