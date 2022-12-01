@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Product } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -16,8 +18,8 @@ export class AddProductComponent implements OnInit {
     
   }
 
-  addProduct(product: any){
-    this.productService.addProductFromService(product.value).subscribe(data => {
+  addProduct(product: NgForm){
+    this.productService.addProductFromService(product.value).subscribe(() => {
       console.log("Champion ajouté")
     })
   }
