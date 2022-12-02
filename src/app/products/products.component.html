@@ -1,5 +1,25 @@
 <div class="global">
     <h1>Liste des personnages de lol : </h1>
+    <div class="search">
+        <input type="text" placeholder="Veuillez saisir un nom">
+        <input type="text" placeholder="Min">
+        <input type="text" placeholder="Max">
+        <div class="asc">
+            <input type="checkbox"><p class="p_search">a_Z</p>
+            <input type="checkbox"><p class="p_search">Z_a</p>
+            <input type="checkbox"><p class="p_search">Asc</p>
+            <input type="checkbox"><p class="p_search">Desc</p>
+        </div>
+        <div class="type">
+            <p class="p_search">Combattant</p> <input type="checkbox">
+            <p class="p_search">Mage</p> <input type="checkbox">
+            <p class="p_search">Tireur</p><input type="checkbox">
+            <p class="p_search">Tank</p><input type="checkbox">
+            <p class="p_search">Support</p><input type="checkbox">
+            <p class="p_search">Assassin</p> <input type="checkbox">
+        </div>
+        <button type="submit" class="but_search">Rechercher</button>
+    </div>
     <div class="cardGlobal">
         <div *ngFor="let product of products">
             <div class="card">
