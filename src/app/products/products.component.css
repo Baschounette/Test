@@ -90,3 +90,24 @@ img {
     width: 100%;
     
 }
+
+.search {
+    display: flex;
+}
+
+.type {
+    display: flex;
+}
+
+.asc {
+    display: flex;
+}
+
+.but_search {
+    border: 2px solid brown;
+    background-color: brown;
+}
+
+.p_search {
+    margin-top: none;
+}
