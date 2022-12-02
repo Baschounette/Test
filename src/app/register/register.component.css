@@ -49,12 +49,14 @@ input {
 	overflow: hidden;
 	border-radius: 20px; 
 	-webkit-mask: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAcCAYAAAAgLuLfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAU9JREFUeNrsmj1rwlAUhm8UhIKrk+DQ3S5CoKsgCAFB6No/4X/q7A8QoeBcBMUhSwaXgMFJUNKlPaeeFlPyce8Z4/vCE7JkuA/n5ubcG2Oq0yamxBsREV81JpJxTmXc6rSIGXGsubAijjL+lqu4wR1UmUs1+rbiXogzpGU4i5fSTCCqlEmRuD5xgqBSTuIpkyaxhhwr1uLrL6+Q4gT7Mp5Y5BWlZxDb7InHBl2GEOcc9jVkeWO4UCVgec/woIrP77wD0YEL5yQsL9X0b4j5bMCBPiwvgQbdtGV5ITyoErK8BTyosvCk0d3AhXOefm826FedyBRbACFOBP/L8B1SrFjlzeEuEUNOKbF4yu/XDM4vikiNxUGQjwrMrTjrEzTer1pC2g9L7X4nryq7O5W2y1tVb+NZSuQPaf4FYUQ8mOuheN3yQVyk45oT26oHvgUYAKpYc6Yexp0QAAAAAElFTkSuQmCC'); /* nécessaire pour Webkit pour ne pas avoir de bordure*/
+	margin-top: 10px;
 }
 .checkbox-change-content {
 	display: inline-block;
 	width: 130px;
 	height: 28px;
 	margin-left: -51px;
+	margin-top: 10px;
 
 	-webkit-transition-duration : 0.5s;
 	-moz-transition-duration : 0.5s;
@@ -74,6 +76,7 @@ input {
 	font-size: 15px;
 	position: relative;
 	z-index: 1;
+	margin-top: 10px;
 }
 
 .on { border-radius: 30px 0 0 30px;}
@@ -99,9 +102,10 @@ input {
 	-moz-transition-duration : 0.5s;
 	-ms-transition-duration : 0.5s;
 	transition-duration: 0.5s;
+	margin-top: 10px;
 }
 
-input:checked + .checkbox-change-content { margin: 0;}
+input:checked + .checkbox-change-content { margin: auto;}
 input:checked + .checkbox-change-content .interm { border-color: #1fb307;}
 
 a {
