@@ -1,33 +1,22 @@
-<div class="login2">
-    <h1 class="titre2">Connexion</h1>
-
-    <div>
-        <label for="email2"> Adresse email : </label>
-        
-        <div><input type="email" placeholder="Adresse email" required="Adresse email" name="email">
-        </div>
-        </div>
-       
-        <div>
-            <label for="password2" class="password2"> Mot de passe : 
-                <div><input type="password" placeholder="Mot de passe" required="Mot de passe" name="password">
-                </div>
-                </label>
-           
-        </div>
-        
-        <div>
-            <button type="submit">Se connecter</button>
-        </div>
-
-        <p>Pas encore inscrit ? <a routerLink="/register2">Inscris toi !</a></p>
-   
-    
-
-         <div class="reseauxsociaux"> 
-        <a href="https://fr-fr.facebook.com/LeagueOfLegendsFROfficial/" target="_blank"><img src="assets\images\Logo 2.png" width="40px" height="40px"></a>
-        <a href="https://www.instagram.com/leagueoflegendsfr/?hl=fr" target="_blank"> <img src="assets\images\Logo 3.jpg" width="40px" height="40px" class="instagram"></a>
-         </div>
-    
-</div>    
-
+<div class="body">
+    <div class="box">
+        <form autocomplete="off">
+            <h2>Connexion</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <span>Email</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <span>Mot de passe</span>
+                <i></i>
+            </div>
+            <div class="links">
+                <a>Mot de passe oublié ?</a>
+                <a routerLink="register">S'inscrire</a>
+            </div>
+            <input type="submit" value="Se Connecter">
+        </form>
+    </div>
+</div>
