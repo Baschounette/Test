@@ -103,14 +103,19 @@ img {
     margin: auto;
 }
 
+.input_search2 {
+    display: flex;
+    margin: auto;
+}
+
 .div_input1, .div_input2, .div_input3 {
     margin-top: 2em;
     margin-bottom: 2em;
 }
 
 .div_input1 {
-    margin-left: 7em;
-    margin-right: 7em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .div_input2 {
