@@ -21,7 +21,13 @@ export class ProductService {
   }
 
   searchByNameFromService(name: NgForm): Observable<Product[]> {
-    let searchName = name.value.searchName
-    return this.http.get('http://localhost:8080/products/name/' + searchName) as Observable<Product[]>
+    let searchByName = name.value.searchName
+    return this.http.get('http://localhost:8080/products/name/' + searchByName) as Observable<Product[]>
+  }
+
+  searchByPriceFromService(price: NgForm): Observable<Product[]> {
+    let price1 = price.value.price1
+    let price2 = price.value.price2
+    return this.http.get('http://localhost:8080/products/price?price1=' + price1 + '&price2=' + price2) as Observable<Product[]>
   }
 }
