@@ -11,6 +11,7 @@ import { ProductService } from '../services/product.service';
 export class ProductsComponent implements OnInit {
 
   public products: Product[] | undefined;
+  ngDropdown = 0;
 
   constructor(private productService: ProductService) { }
   
@@ -38,6 +39,10 @@ export class ProductsComponent implements OnInit {
 
   annuler() {
     this.getAllProduct()
+  }
+
+  filters(filters: NgForm){
+    
   }
 
 }
