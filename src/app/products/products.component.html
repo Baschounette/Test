@@ -11,20 +11,22 @@
             <div class="div_input3"><input type="number" placeholder="Max" name="price2" ngModel required></div>
             <button type="submit" class="but_search">Rechercher</button>
         </form>
-        <div class="asc">
-            <div class="div_asc"><p class="p_search">a_Z</p><input type="checkbox" class="check"></div>
-            <div class="div_asc"><p class="p_search">Z_a</p><input type="checkbox" class="check"></div>
-            <div class="div_asc"><p class="p_search">Asc</p><input type="checkbox" class="check"></div>
-            <div class="div_asc"><p class="p_search">Desc</p><input type="checkbox" class="check"></div>
-        </div>
-        <div class="type">
-            <div><p class="p_search">Combattant</p> <input type="checkbox" class="check"></div>
-            <div><p class="p_search">Mage</p> <input type="checkbox" class="check"></div>
-            <div><p class="p_search">Tireur</p><input type="checkbox" class="check"></div>
-            <div><p class="p_search">Tank</p><input type="checkbox" class="check"></div>
-            <div><p class="p_search">Support</p><input type="checkbox" class="check"></div>
-            <div><p class="p_search">Assassin</p> <input type="checkbox" class="check"></div>
-        </div>
+        <form (ngSubmit)="filters(filters)" #filters="ngForm" class="dropdown">
+            <select [(ngModel)]="ngDropdown" name="filter" ngModel required>
+                <option value="Filtre">Filtre</option>
+                <option value="Assassin">Assassin</option>
+                <option value="Mage">Mage</option>
+                <option value="Tireur">Tireur</option>
+                <option value="Support">Support</option>
+                <option value="Tank">Tank</option>
+                <option value="Combattant">Combattant</option>
+                <option value="Ordre Alphabétique">Ordre Alphabétique</option>
+                <option value="Ordre Alphabétique Inverse">Ordre Alphabétique Inverse</option>
+                <option value="Ordre Croissant">Ordre Croissant</option>
+                <option value="Ordre Décroissant">Ordre croissant</option>
+            </select>
+            <button type="submit" class="but_search">Rechercher</button>
+        </form>
     </div>
     <div class="cardGlobal">
         <div *ngFor="let product of products">
