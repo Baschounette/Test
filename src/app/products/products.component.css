@@ -3,6 +3,8 @@
     margin: 2rem;
     height: 100%;
     padding: 1rem;
+    box-sizing: border-box;
+    width: fit-content;
 }
 
 .cardGlobal {
@@ -96,6 +98,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid orange;
+    font-size: 0.75em;
 }
 
 .input_search {
