@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Product } from '../models/product.model';
 import { ProductService } from '../services/product.service';
 
@@ -23,6 +24,15 @@ export class ProductsComponent implements OnInit {
     })
   }
 
+  searchByName(name: NgForm){
+    this.productService.searchByNameFromService(name.value).subscribe((res: Product[]) => {
+      this.products = res;
+    })
 
+  }
+
+  searchByPrice(price: NgForm){
+
+  }
 
 }
