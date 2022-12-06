@@ -14,6 +14,8 @@ import { Login2Component } from './login2/login2.component';
 import { Register2Component } from './register2/register2.component';
 import { FormsModule } from '@angular/forms';
 import { AddProductComponent } from './Logged/add-product/add-product.component';
+import { ButtonComponent } from './button/button.component';
+import { Button2Component } from './button2/button2.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AddProductComponent } from './Logged/add-product/add-product.component'
     FooterComponent,
     Login2Component,
     Register2Component,
-    AddProductComponent
+    AddProductComponent,
+    ButtonComponent,
+    Button2Component
   ],
   imports: [
     BrowserModule,

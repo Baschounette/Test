@@ -1,26 +1,6 @@
 <div class="global">
     <h1>Liste des personnages de lol : </h1>
     <div class="search">
-        <div class="input_search">
-            <div class="div_input1"><input type="text" placeholder="Veuillez saisir un nom"></div>
-            <div class="div_input2"><input type="text" placeholder="Min"></div>
-            <div class="div_input3"><input type="text" placeholder="Max"></div>
-        </div>
-        <div class="asc">
-            <div class="div_asc"><p class="p_search">a_Z</p><input type="checkbox" class="check"></div>
-            <div class="div_asc"><p class="p_search">Z_a</p><input type="checkbox" class="check"></div>
-            <div class="div_asc"><p class="p_search">Asc</p><input type="checkbox" class="check"></div>
-            <div class="div_asc"><p class="p_search">Desc</p><input type="checkbox" class="check"></div>
-        </div>
-        <div class="type">
-            <div><p class="p_search">Combattant</p> <input type="checkbox" class="check"></div>
-            <div><p class="p_search">Mage</p> <input type="checkbox" class="check"></div>
-            <div><p class="p_search">Tireur</p><input type="checkbox" class="check"></div>
-            <div><p class="p_search">Tank</p><input type="checkbox" class="check"></div>
-            <div><p class="p_search">Support</p><input type="checkbox" class="check"></div>
-            <div><p class="p_search">Assassin</p> <input type="checkbox" class="check"></div>
-        </div>
-        <button type="submit" class="but_search">Rechercher</button>
     </div>
     <div class="cardGlobal">
         <div *ngFor="let product of products">

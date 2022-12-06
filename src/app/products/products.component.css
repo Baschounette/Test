@@ -1,12 +1,10 @@
 .global {
-    /* background-color: white; */
     margin: 2rem;
     height: 100%;
     padding: 1rem;
 }
 
 .cardGlobal {
-    /* background-color: red; */
     margin: 1rem;
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -14,7 +12,6 @@
 }   
 
 .card {
-    /* background-color: purple; */
     color: chocolate;
     text-align: center;
     margin: 1rem;
@@ -66,10 +63,10 @@ h2 {
 .available-true {
     color: lime;
 }
-
 .available-false {
     color: red;
 }
+
 .but {
     border: 1px solid lime;
     border-color: brown;
@@ -88,97 +85,5 @@ h2 {
 
 img {
     width: 100%;
-    
 }
 
-.search {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid orange;
-}
-
-.input_search {
-    display: flex;
-    margin: auto;
-}
-
-.div_input1, .div_input2, .div_input3 {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.div_input1 {
-    margin-left: 7em;
-    margin-right: 7em;
-}
-
-.div_input2 {
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-.div_input3 {
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-.type {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    text-align: center;
-    margin: auto;
-}
-
-.asc {
-    display: flex;
-    margin: auto;
-    text-align: center;
-}
-
-.div_asc {
-    margin: 1em;
-}
-
-.but_search {
-    border: 2px solid brown;
-    background-color: brown;
-    margin: auto;
-    height: 3em;
-    width: fit-content;
-    font-size: 1.25em;
-}
-
-.but_search:hover {
-    cursor: pointer;
-    box-shadow: -1px 1px 20px 1px lightblue;
-    background-color: lightgreen;
-}
-
-.p_search {
-    margin-top: none;
-    font-size: 1.5em;
-    color: lime;
-}
-
-input {
-    height: 3em;
-}
-
-input::placeholder {
-    text-align: center;
-    font-weight: bold;
-}
-
-.check {
-    width: 1.5em;
-    height: 1.5em;
-    color: black;
-}
-
-.check:hover {
-    cursor: pointer;
-}
