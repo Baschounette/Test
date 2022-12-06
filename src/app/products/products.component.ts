@@ -25,12 +25,9 @@ export class ProductsComponent implements OnInit {
   }
 
   searchByName(name: NgForm){
-    this.productService.searchByNameFromService(name.value).subscribe((res: Product[]) => {
+    this.productService.searchByNameFromService(name).subscribe((res) => {
       this.products = res;
-      console.log(res)
-      console.log(this.products)
     })
-
   }
 
   searchByPrice(price: NgForm){
