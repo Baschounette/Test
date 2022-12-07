@@ -190,3 +190,12 @@ input::placeholder {
 .check:hover {
     cursor: pointer;
 }
+
+.dropdown {
+    margin: auto;
+    display: flex;
+}
+
+select {
+    margin-left: 1em;
+}

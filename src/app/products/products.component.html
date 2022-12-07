@@ -11,8 +11,7 @@
             <div class="div_input3"><input type="number" placeholder="Max" name="price2" ngModel required></div>
             <button type="submit" class="but_search">Rechercher</button>
         </form>
-        <form (ngSubmit)="searchFilter(filters)" #filters="ngForm" class="dropdown">
-            <label for="filter">Filtre</label>
+        <form (ngSubmit)="searchFilters(filters)" #filters="ngForm" class="dropdown">
             <select [(ngModel)]="ngDropdown" name="filter" ngModel required>
                 <option value="Filtre">Filtre</option>
                 <option value="Assassin">Assassin</option>
@@ -23,8 +22,8 @@
                 <option value="Combattant">Combattant</option>
                 <option value="Ordre Alphabétique">Ordre Alphabétique</option>
                 <option value="Ordre Alphabétique Inverse">Ordre Alphabétique Inverse</option>
-                <option value="Ordre Croissant">Ordre Croissant</option>
-                <option value="Ordre Décroissant">Ordre croissant</option>
+                <option value="Prix Croissant">Prix Croissant</option>
+                <option value="Prix Décroissant">Prix Décroissant</option>
             </select>
             <button type="submit" class="but_search">Rechercher</button>
         </form>
