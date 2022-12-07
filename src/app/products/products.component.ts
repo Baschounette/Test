@@ -41,7 +41,7 @@ export class ProductsComponent implements OnInit {
     this.getAllProduct()
   }
 
-  filters(filters: NgForm){
+  searchFilter(filters: NgForm){
     
   }
 
