@@ -42,21 +42,20 @@ export class ProductsComponent implements OnInit {
   }
 
   searchFilters(filters: NgForm){
-    console.log(filters.value)
-    if(filters.value === 'Mage' || filters.value === 'Assassin' || filters.value === 'Tireur'
-     || filters.value === 'Tank' || filters.value === 'Combattant' || filters.value === 'Support') {
+    if(filters.value.filter === 'Mage' || filters.value.filter === 'Assassin' || filters.value.filter === 'Tireur'
+     || filters.value.filter === 'Tank' || filters.value.filter === 'Combattant' || filters.value.filter === 'Support') {
       this.productService.getProductByTypeFromService(filters).subscribe((res: Product[]) => {
         this.products = res;
       }) 
-    } else if (filters.value === 'Ordre Alphabétique'){
+    } else if (filters.value.filter === 'Ordre Alphabétique'){
       this.productService.getAllProductOrderByAscFromService().subscribe((res: Product[]) => {
         this.products = res;
       }) 
-    } else if (filters.value === 'Ordre Alphabétique Inverse'){
+    } else if (filters.value.filter === 'Ordre Alphabétique Inverse'){
       this.productService.getAllProductOrderByDescFromService().subscribe((res: Product[]) => {
         this.products = res;
       }) 
-    } else if (filters.value === 'Prix Croissant'){
+    } else if (filters.value.filter === 'Prix Croissant'){
       this.productService.getAllProductOrderByPriceAscFromService().subscribe((res: Product[]) => {
         this.products = res;
       }) 
