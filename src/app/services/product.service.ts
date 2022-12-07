@@ -30,4 +30,26 @@ export class ProductService {
     let price2 = price.value.price2
     return this.http.get('http://localhost:8080/products/price?price1=' + price1 + '&price2=' + price2) as Observable<Product[]>
   }
+
+  getAllProductOrderByAscFromService(): Observable<Product[]> {
+    return this.http.get('http://localhost:8080/products/productOrderByNameAsc') as Observable<Product[]>
+  }
+
+  getAllProductOrderByDescFromService(): Observable<Product[]> {
+    return this.http.get('http://localhost:8080/products/productOrderByNameDesc') as Observable<Product[]>  
+  }
+
+  getProductByTypeFromService(filters: NgForm): Observable<Product[]> {
+    let searchByType = filters.value.filter
+    return this.http.get('http://localhost:8080/products/type/' + searchByType) as Observable<Product[]>
+  }
+
+  getAllProductOrderByPriceAscFromService(): Observable<Product[]> {
+    return this.http.get('http://localhost:8080/products/productOrderByPriceAsc') as Observable<Product[]>
+  }
+ 
+  getAllProductOrderByPriceDescFromService(): Observable<Product[]> {
+    return this.http.get('http://localhost:8080/products/productOrderByPriceDesc') as Observable<Product[]>
+  }
+
 }
