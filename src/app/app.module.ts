@@ -14,7 +14,7 @@ import { Login2Component } from './components/Basch/login2/login2.component';
 import { Register2Component } from './components/Basch/register2/register2.component';
 import { FormsModule } from '@angular/forms';
 import { AddProductComponent } from './components/Logged/add-product/add-product.component';
-import { AdminboardComponent } from './adminboard/adminboard.component';
+import { AdminboardComponent } from './components/Logged/adminboard/adminboard.component';
 
 @NgModule({
   declarations: [
