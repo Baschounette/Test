@@ -4,16 +4,17 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { ProductsComponent } from './products/products.component';
-import { FooterComponent } from './footer/footer.component';
-import { Login2Component } from './login2/login2.component';
-import { Register2Component } from './register2/register2.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { ProductsComponent } from './components/products/products.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { Login2Component } from './components/Basch/login2/login2.component';
+import { Register2Component } from './components/Basch/register2/register2.component';
 import { FormsModule } from '@angular/forms';
-import { AddProductComponent } from './Logged/add-product/add-product.component';
+import { AddProductComponent } from './components/Logged/add-product/add-product.component';
+import { AdminboardComponent } from './adminboard/adminboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddProductComponent } from './Logged/add-product/add-product.component'
     FooterComponent,
     Login2Component,
     Register2Component,
-    AddProductComponent
+    AddProductComponent,
+    AdminboardComponent
   ],
   imports: [
     BrowserModule,
