@@ -1,0 +1,16 @@
+.register{
+    text-align: center;
+}
+.inputBox{
+    display: flex;
+    flex-direction: column-reverse;
+    width: fit-content;
+    margin: auto;
+}
+
+input, label, button {
+    translate: all .3s;
+}
+label {
+    transform: translate(10px , -15px);
+}
