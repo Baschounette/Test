@@ -1,11 +1,19 @@
 .register{
     text-align: center;
+    background-color: #1c1c1c;
+    width: fit-content;
+    margin: auto;
+}
+
+h1{
+    color: aqua;
 }
 .inputBox{
     display: flex;
     flex-direction: column-reverse;
     width: fit-content;
     margin: auto;
+    margin-top: 1.5em;
 }
 
 input, label, button {
@@ -13,4 +21,45 @@ input, label, button {
 }
 label {
     transform: translate(10px , -15px);
+    cursor: text;
+    transform-origin: left top;
+    position: absolute;
+    color: aqua;
+}
+
+input{
+    border-bottom: 2px solid grey;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    background-color: #ff9234;
+}
+input::placeholder {
+    opacity: 0;
+}
+
+input:focus, input:not(:placeholder-shown) {
+    border-bottom: 2px solid;
+    border-color: linear-gradient(.25turn, blue, 10%, red);
+}   
+    /* animation: animate 3s linear infinite;    
+}
+@keyframes animate {
+    0%
+    {
+    
+    }
+    100%
+    {
+    
+    }
+} */
+
+input:not(:placeholder-shown) ~ label, input:focus ~ label {
+    transform: translate(10px , -30px) scale(0.8);
 }
