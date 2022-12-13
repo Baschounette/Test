@@ -30,6 +30,7 @@ label {
 input{
     border-bottom: 2px solid grey;
     padding: 10px;
+    color: red;
 }
 
 .cgu{
