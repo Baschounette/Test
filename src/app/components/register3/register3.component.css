@@ -1,0 +1,91 @@
+.register{
+    text-align: center;
+    background-color: #1c1c1c;
+    width: fit-content;
+    margin: auto;
+}
+
+h1{
+    color: aqua;
+}
+.inputBox{
+    display: flex;
+    flex-direction: column-reverse;
+    width: fit-content;
+    margin: auto;
+    margin-top: 1.5em;
+}
+
+input, label, button {
+    translate: all .3s;
+}
+label {
+    transform: translate(10px , -15px);
+    cursor: text;
+    transform-origin: left top;
+    position: absolute;
+    color: aqua;
+}
+
+input{
+    border-bottom: 2px solid grey;
+    padding: 10px;
+    color: red;
+}
+
+.cgu{
+    margin-top: 1.5em;
+}
+
+.checkbox{
+   margin-top: 1.0em; 
+   width: 20px;
+   height: 20px;
+}
+
+p, .cgu{
+    color: white;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    background-color: #ff9234;
+    margin-top: 10px;
+}
+input::placeholder {
+    opacity: 0;
+}
+
+input:focus, input:not(:placeholder-shown) {
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(360deg, #743ad5, #d53a9d);
+    animation: animate 1s linear infinite;
+    
+}   
+@keyframes animate {
+
+    0% {
+        border-image-source: linear-gradient(360deg, #743ad5,#d53a9d, aqua);          
+    }
+    25%{
+        border-image-source: linear-gradient(270deg, #743ad5,#d53a9d, aqua);
+    }
+    50%{
+        border-image-source: linear-gradient(180deg, #743ad5, #d53a9d, aqua);
+    }
+    75%{
+        border-image-source: linear-gradient(90deg, #743ad5,#d53a9d, aqua);
+    }
+    100%{
+        border-image-source: linear-gradient(0deg, #743ad5,#d53a9d, aqua);
+    }
+}
+
+input:not(:placeholder-shown) ~ label, input:focus ~ label {
+    transform: translate(10px , -30px) scale(0.8);
+}
+

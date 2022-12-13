@@ -1,0 +1,42 @@
+<div class="register">
+    <h1>Inscription</h1>
+    <!-- <form (ngSubmit)="addUser(user)" #user="ngForm"> -->
+        <form autocomplete="off">
+            <div class="inputBox">
+                <input type="text" placeholder=" " id="pseudo" name="name" ngModel required>
+                <label for="pseudo">Pseudo</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="password" placeholder=" " id="password" name="password" ngModel required>
+                <label for="password">Mot de passe</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="password" placeholder=" " id="password2" name="password" ngModel required>
+                <label for="password2">Vérification Mot de passe</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="email" placeholder=" " id="email" name="mail" ngModel required>
+                <label for="email">Adresse Mail</label>
+            </div>
+
+        </form>
+
+        <div>
+            <div class="cgu"> Veuillez accepter les conditions générales d'utilisation (CGU).</div>
+            <input class="checkbox" type="checkbox" name="validate" id="checkbox" ngModel required>
+        </div>
+
+        <div>
+            <button class="but" type="submit">Inscription</button>
+        </div>
+
+        <div>
+            <p>Déjà inscrit ? <a routerLink="/login">Identifie toi !</a></p>
+        </div>
+
+    <!-- </form> -->
+
+</div>

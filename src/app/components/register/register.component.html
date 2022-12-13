@@ -1,26 +1,26 @@
 <div class="register">
     <h1>Inscription</h1>
-    <form>
+    <form (ngSubmit)="addUser(user)" #user="ngForm">
         <div>
-            <input type="text" placeholder="Pseudo" name="Pseudo">
+            <input type="text" placeholder="Pseudo" name="name" ngModel required>
         </div>
 
         <div>
-            <input type="password" placeholder="Mot de passe" name="password">
+            <input type="password" placeholder="Mot de passe" name="password" ngModel required>
         </div>
 
         <div>
-            <input type="password" placeholder="Vérification mot de passe" name="password">
+            <input type="password" placeholder="Vérification mot de passe" name="password" ngModel required>
         </div>
 
         <div>
-            <input type="email" placeholder="Adresse email" name="email">
+            <input type="email" placeholder="Adresse email" name="mail" ngModel required>
         </div>
 
         <div>
             <label for="checkbox" class="checkbox">
                 <span class="checkbox-change">
-                    <input type="checkbox" name="validate" id="checkbox">
+                    <input type="checkbox" name="validate" id="checkbox" ngModel required>
                     <span class="checkbox-change-content">
                         <span class="on">OUI</span>
 					    <span class="interm"></span>

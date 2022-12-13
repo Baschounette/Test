@@ -28,7 +28,7 @@ import { AdminboardComponent } from './components/Logged/adminboard/adminboard.c
     Login2Component,
     Register2Component,
     AddProductComponent,
-    AdminboardComponent
+    AdminboardComponent,
   ],
   imports: [
     BrowserModule,
