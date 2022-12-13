@@ -13,4 +13,8 @@ import { User } from '../models/user.model';
     addUserFromService(user: User){
         return this.http.post('http://localhost:8080/users/addUser', user)
     }
+
+    loginFromService(user: NgForm) {
+      return this.http.get('http://localhost:8080/users/login?name=' + user.value.name + '&password=' + user.value.password)
+    }
   }

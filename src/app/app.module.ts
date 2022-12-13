@@ -15,6 +15,7 @@ import { Register2Component } from './components/Basch/register2/register2.compo
 import { FormsModule } from '@angular/forms';
 import { AddProductComponent } from './components/Logged/add-product/add-product.component';
 import { AdminboardComponent } from './components/Logged/adminboard/adminboard.component';
+import { Register3Component } from './components/register3/register3.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AdminboardComponent } from './components/Logged/adminboard/adminboard.c
     FooterComponent,
     Login2Component,
     Register2Component,
+    Register3Component,
     AddProductComponent,
     AdminboardComponent,
   ],
