@@ -32,12 +32,27 @@ input{
     padding: 10px;
 }
 
+.cgu{
+    margin-top: 1.5em;
+}
+
+.checkbox{
+   margin-top: 1.0em; 
+   width: 20px;
+   height: 20px;
+}
+
+p, .cgu{
+    color: white;
+}
+
 button {
     border: none;
     padding: 10px 15px;
     color: white;
     cursor: pointer;
     background-color: #ff9234;
+    margin-top: 10px;
 }
 input::placeholder {
     opacity: 0;
@@ -46,23 +61,30 @@ input::placeholder {
 input:focus, input:not(:placeholder-shown) {
     border-bottom: 2px solid;
     border-image-slice: 1;
-    border-image-source: linear-gradient(.25turn, #743ad5, #d53a9d);
+    border-image-source: linear-gradient(360deg, #743ad5, #d53a9d);
     animation: animate 1s linear infinite;
     
 }   
 @keyframes animate {
 
     0% {
-        border-image-source: linear-gradient(.25turn, #743ad5,aqua, #d53a9d);          
+        border-image-source: linear-gradient(360deg, #743ad5,#d53a9d, aqua);          
+    }
+    25%{
+        border-image-source: linear-gradient(270deg, #743ad5,#d53a9d, aqua);
     }
     50%{
-        border-image-source: linear-gradient(.25turn, #d53a9d, aqua, #743ad5);
+        border-image-source: linear-gradient(180deg, #743ad5, #d53a9d, aqua);
+    }
+    75%{
+        border-image-source: linear-gradient(90deg, #743ad5,#d53a9d, aqua);
     }
     100%{
-        border-image-source: linear-gradient(.25turn, #743ad5,aqua, #d53a9d);
+        border-image-source: linear-gradient(0deg, #743ad5,#d53a9d, aqua);
     }
 }
 
 input:not(:placeholder-shown) ~ label, input:focus ~ label {
     transform: translate(10px , -30px) scale(0.8);
 }
+
