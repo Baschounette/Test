@@ -45,20 +45,23 @@ input::placeholder {
 
 input:focus, input:not(:placeholder-shown) {
     border-bottom: 2px solid;
-    border-color: linear-gradient(.25turn, blue, 10%, red);
+    border-image-slice: 1;
+    border-image-source: linear-gradient(.25turn, #743ad5, #d53a9d);
+    animation: animate 1s linear infinite;
+    
 }   
-    /* animation: animate 3s linear infinite;    
-}
 @keyframes animate {
-    0%
-    {
-    
+
+    0% {
+        border-image-source: linear-gradient(.25turn, #743ad5,aqua, #d53a9d);          
     }
-    100%
-    {
-    
+    50%{
+        border-image-source: linear-gradient(.25turn, #d53a9d, aqua, #743ad5);
     }
-} */
+    100%{
+        border-image-source: linear-gradient(.25turn, #743ad5,aqua, #d53a9d);
+    }
+}
 
 input:not(:placeholder-shown) ~ label, input:focus ~ label {
     transform: translate(10px , -30px) scale(0.8);
