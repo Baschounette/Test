@@ -10,6 +10,11 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class Login2Component implements OnInit {
 
+  public loginFail = false;
+  public loginGood = false;
+  public loginNotValidate = false;
+
+
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
@@ -21,10 +26,13 @@ export class Login2Component implements OnInit {
       console.log(res)
       if(res == 1) {
         console.log("connexion réussi :D")
+        this.loginGood = true;
       } else if(res == 2) {
         console.log("Pas encore validé, dommage :'(")
+        this.loginNotValidate = true;
       } else {
         console.log("Identifiant incorrect :/")
+        this.loginFail = true;
       }
     })
   }

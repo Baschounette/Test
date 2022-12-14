@@ -111,9 +111,30 @@ h2 {
 	transition: 0.5s;
 }
 
+.inputBoxNotValidate input:valid ~ span,
+.inputBoxNotValidate input:focus ~ span {
+	color: purple;
+	transform: translateX(0px) translateY(-34px);
+	font-size: 0.75em;
+}
+
+.inputBoxGood input:valid ~ span,
+.inputBoxGood input:focus ~ span {
+	color: green;
+	transform: translateX(0px) translateY(-34px);
+	font-size: 0.75em;
+}
+
+.inputBoxFail input:valid ~ span,
+.inputBoxFail input:focus ~ span {
+	color: #e31212;
+	transform: translateX(0px) translateY(-34px);
+	font-size: 0.75em;
+}
+
 .inputBox input:valid ~ span,
 .inputBox input:focus ~ span {
-	color: #e31212;
+	color: #45f3ff;
 	transform: translateX(0px) translateY(-34px);
 	font-size: 0.75em;
 }
@@ -132,11 +153,29 @@ h2 {
 	z-index: 9;
 }
 
-.inputBox input:valid ~ i,
-.inputBox input:focus ~ i {
+.inputBoxGood input:valid ~ i,
+.inputBoxGood input:focus ~ i {
+	height: 44px;
+	background: green;
+}
+
+.inputBoxFail input:valid ~ i,
+.inputBoxFail input:focus ~ i {
 	height: 44px;
 	background: #e31212;
 }
+.inputBoxNotValidate input:valid ~ i,
+.inputBoxNotValidate input:focus ~ i {
+	height: 44px;
+	background: purple;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+	height: 44px;
+	background: #45f3ff;
+}
+
 
 .links {
 	display: flex;
