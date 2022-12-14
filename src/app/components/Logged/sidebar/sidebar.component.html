@@ -2,14 +2,14 @@
     <mat-drawer mode="side" opened class="sidebar">
         <ul>
             <hr class="lineseparator">
-            <li> <button (click)="displayProfil()">Profil</button> </li>
-            <li> <button (click)="displayMyReservation()">Mes commandes</button> </li>
-            <li> <button (click)="displaySupport()">Support</button> </li>
-            <hr class="lineseparator">
-            <li> <button (click)="displayAdmin()">Pannel admin</button> </li>
-            <li> <button (click)="displayAddProduct()">Ajouter un Produit</button> </li>
-            <li> <button (click)="displayUsers()">Utilisateurs</button> </li>
-            <li> <button (click)="displayReservation()">Commandes</button> </li>
+            <li> <button (click)="displayProfil()" [ngClass]="{'buttonAnimate' : isDisplayProfil}">Profil</button> </li>
+            <li> <button (click)="displayMyReservation()" [ngClass]="{'buttonAnimate' : isDisplayMyReservation}">Mes commandes</button> </li>
+            <li> <button (click)="displaySupport()" [ngClass]="{'buttonAnimate' : isDisplaySupport}">Support</button> </li>
+            <hr class="lineseparator">                                                  
+            <li> <button (click)="displayAdmin()" [ngClass]="{'buttonAnimate' : isDisplayAdmin}">Pannel admin</button> </li>
+            <li> <button (click)="displayAddProduct()" [ngClass]="{'buttonAnimate' : isDisplayAddProduct}">Ajouter un Produit</button> </li>
+            <li> <button (click)="displayUsers()" [ngClass]="{'buttonAnimate' : isDisplayUsers}">Utilisateurs</button> </li>
+            <li> <button (click)="displayReservation()" [ngClass]="{'buttonAnimate' : isDisplayReservation}">Commandes</button> </li>
             <hr class="lineseparator">
         </ul>
     </mat-drawer>

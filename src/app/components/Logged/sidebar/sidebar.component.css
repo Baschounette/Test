@@ -33,4 +33,31 @@ li{
 
 button {
     color: white;
+    cursor: pointer;
+}
+
+.buttonAnimate{
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(360deg, #743ad5, #d53a9d);
+    animation: animate 1s linear infinite;
+    padding: 0.3em; 
+}
+@keyframes animate {
+
+    0% {
+        border-image-source: linear-gradient(360deg, #743ad5,#d53a9d, aqua);          
+    }
+    25%{
+        border-image-source: linear-gradient(270deg, #743ad5,#d53a9d, aqua);
+    }
+    50%{
+        border-image-source: linear-gradient(180deg, #743ad5, #d53a9d, aqua);
+    }
+    75%{
+        border-image-source: linear-gradient(90deg, #743ad5,#d53a9d, aqua);
+    }
+    100%{
+        border-image-source: linear-gradient(0deg, #743ad5,#d53a9d, aqua);
+    }
 }

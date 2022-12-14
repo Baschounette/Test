@@ -24,73 +24,48 @@ export class SidebarComponent implements OnInit {
     
   }
 
-  displayProfil(){
-    this.isDisplayProfil = true
+  changeButton() {
+    this.isDisplayProfil = false
     this.isDisplayMyReservation = false
     this.isDisplaySupport = false
     this.isDisplayAdmin = false
     this.isDisplayAddProduct = false
     this.isDisplayUsers = false
     this.isDisplayReservation = false
+  }
+
+  displayProfil(){
+    this.changeButton()
+    this.isDisplayProfil = true
   }
 
   displayMyReservation(){
-    this.isDisplayProfil = false
+    this.changeButton()
     this.isDisplayMyReservation = true
-    this.isDisplaySupport = false
-    this.isDisplayAdmin = false
-    this.isDisplayAddProduct = false
-    this.isDisplayUsers = false
-    this.isDisplayReservation = false
   }
 
   displaySupport(){
-    this.isDisplayProfil = false
-    this.isDisplayMyReservation = false
+    this.changeButton()
     this.isDisplaySupport = true
-    this.isDisplayAdmin = false
-    this.isDisplayAddProduct = false
-    this.isDisplayUsers = false
-    this.isDisplayReservation = false
   }
 
   displayAdmin(){
-    this.isDisplayProfil = false
-    this.isDisplayMyReservation = false
-    this.isDisplaySupport = false
+    this.changeButton()
     this.isDisplayAdmin = true
-    this.isDisplayAddProduct = false
-    this.isDisplayUsers = false
-    this.isDisplayReservation = false
   }
 
   displayAddProduct(){
-    this.isDisplayProfil = false
-    this.isDisplayMyReservation = false
-    this.isDisplaySupport = false
-    this.isDisplayAdmin = false
+    this.changeButton()
     this.isDisplayAddProduct = true
-    this.isDisplayUsers = false
-    this.isDisplayReservation = false
   }
 
   displayUsers(){
-    this.isDisplayProfil = false
-    this.isDisplayMyReservation = false
-    this.isDisplaySupport = false
-    this.isDisplayAdmin = false
-    this.isDisplayAddProduct = false
+    this.changeButton()
     this.isDisplayUsers = true
-    this.isDisplayReservation = false
   }
 
   displayReservation(){
-    this.isDisplayProfil = false
-    this.isDisplayMyReservation = false
-    this.isDisplaySupport = false
-    this.isDisplayAdmin = false
-    this.isDisplayAddProduct = false
-    this.isDisplayUsers = false
+    this.changeButton()
     this.isDisplayReservation = true
   }
 }
