@@ -22,18 +22,24 @@
 ul {
     margin: 1em;
     padding: 1em;
-    text-align: center;
 }
 
 li{
     margin: 1em;
+    margin-left: 2em;
     font-size: 1em;
     letter-spacing: 0.05px;
+    align-items: center;
+}
+
+img{
+    margin-left: 1em;
 }
 
 button {
     color: white;
     cursor: pointer;
+    margin-left: 2em;
 }
 
 .buttonAnimate{
