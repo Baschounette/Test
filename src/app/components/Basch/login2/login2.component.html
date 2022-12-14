@@ -2,18 +2,18 @@
     <div class="box">
         <form (ngSubmit)="login(user)" #user="ngForm" autocomplete="off">
             <h2>Connexion</h2>
-            <div [ngClass]="{'inputBoxGood' : loginGood === true,
-             'inputBoxFail' : loginFail === true,
+            <div *ngIf="loginFail" class="dynamic"><p>Identifiants incorrects :(</p></div>
+            <div *ngIf="loginNotValidate" class="dynamic2"><p>Utilisateur non validé :'(</p></div>
+            <div [ngClass]="{'inputBoxFail' : loginFail === true,
              'inputBoxNotValidate' : loginNotValidate === true,
-             'inputBox' : loginGood === false && loginFail === false && loginNotValidate === false}">
+             'inputBox' : loginFail === false && loginNotValidate === false}"> 
                 <input name="name" type="text" ngModel required>
                 <span>Pseudo</span>
                 <i></i>
             </div>
-            <div [ngClass]="{'inputBoxGood' : loginGood === true,
-             'inputBoxFail' : loginFail === true,
+            <div [ngClass]="{'inputBoxFail' : loginFail === true,
              'inputBoxNotValidate' : loginNotValidate === true,
-             'inputBox' : loginGood === false && loginFail === false && loginNotValidate === false}">
+             'inputBox' : loginFail === false && loginNotValidate === false}">
                 <input name="password" type="password" ngModel required>
                 <span>Mot de passe</span>
                 <i></i>

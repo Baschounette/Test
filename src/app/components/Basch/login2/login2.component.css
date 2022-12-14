@@ -79,13 +79,13 @@ h2 {
 	letter-spacing: 0.1em;
 }
 
-.inputBox {
+.inputBox, .inputBoxFail, .inputBoxNotValidate {
 	position: relative;
 	width: 300px;
 	margin-top: 35px;
 }
 
-.inputBox input {
+.inputBox input, .inputBoxFail input, .inputBoxNotValidate input {
 	position: relative;
 	width: 100%;
 	padding: 20px 10px 10px;
@@ -100,7 +100,7 @@ h2 {
 	z-index: 10;
 }
 
-.inputBox span {
+.inputBox span, .inputBoxFail span, .inputBoxNotValidate span {
 	position: absolute;
 	left: 0;
 	padding: 20px 0px 10px;
@@ -114,13 +114,6 @@ h2 {
 .inputBoxNotValidate input:valid ~ span,
 .inputBoxNotValidate input:focus ~ span {
 	color: purple;
-	transform: translateX(0px) translateY(-34px);
-	font-size: 0.75em;
-}
-
-.inputBoxGood input:valid ~ span,
-.inputBoxGood input:focus ~ span {
-	color: green;
 	transform: translateX(0px) translateY(-34px);
 	font-size: 0.75em;
 }
@@ -139,7 +132,7 @@ h2 {
 	font-size: 0.75em;
 }
 
-.inputBox i {
+.inputBox i, .inputBoxFail i, .inputBoxNotValidate i {
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -151,12 +144,6 @@ h2 {
 	transition: 0.5s;
 	pointer-events: none;
 	z-index: 9;
-}
-
-.inputBoxGood input:valid ~ i,
-.inputBoxGood input:focus ~ i {
-	height: 44px;
-	background: green;
 }
 
 .inputBoxFail input:valid ~ i,
@@ -213,4 +200,27 @@ input[type="submit"]:active {
 
 input[type="submit"]:hover {
 	background: #e31212;
+}
+
+.dynamic{
+	margin-top: 1em;
+	background-color: #e31212;
+	width: 300px;
+	border-radius: 4px;
+	color: white;
+}
+
+.dynamic2{
+	margin-top: 1em;
+	background-color: purple;
+	width: 300px;
+	border-radius: 4px;
+	color: white;
+}
+
+p{
+	text-align: center;
+	font-size: 1em;
+	letter-spacing: 0.05em;
+	padding: 1em;
 }
