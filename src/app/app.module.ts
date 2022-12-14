@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { AddProductComponent } from './components/Logged/add-product/add-product.component';
 import { AdminboardComponent } from './components/Logged/adminboard/adminboard.component';
 import { Register3Component } from './components/register3/register3.component';
+import { SidebarComponent } from './components/Logged/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { Register3Component } from './components/register3/register3.component';
     Register3Component,
     AddProductComponent,
     AdminboardComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,

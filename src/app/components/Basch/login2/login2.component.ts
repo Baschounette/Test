@@ -26,7 +26,7 @@ export class Login2Component implements OnInit {
     this.userService.loginFromService(user).subscribe((res) => {
       console.log(res)
       if(res == 1) {
-        this.router.navigate(["homepage"])
+        this.router.navigate(["sidebar"])
       } else if(res == 2) {
         console.log("Pas encore validé, dommage :'(")
         this.loginNotValidate = true;
