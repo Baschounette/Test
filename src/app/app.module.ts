@@ -17,6 +17,7 @@ import { AddProductComponent } from './components/Logged/add-product/add-product
 import { AdminboardComponent } from './components/Logged/adminboard/adminboard.component';
 import { Register3Component } from './components/register3/register3.component';
 import { SidebarComponent } from './components/Logged/sidebar/sidebar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SidebarComponent } from './components/Logged/sidebar/sidebar.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
