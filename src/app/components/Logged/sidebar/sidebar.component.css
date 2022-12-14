@@ -35,12 +35,13 @@ button {
     color: white;
     cursor: pointer;
 }
-button:hover {
+
+.buttonAnimate{
     border: 2px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(360deg, #743ad5, #d53a9d);
     animation: animate 1s linear infinite;
-    padding: 0.3em;
+    padding: 0.3em; 
 }
 @keyframes animate {
 
