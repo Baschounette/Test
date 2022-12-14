@@ -1,17 +1,18 @@
 .sidenav {
     width: 100vw;
     height: 100vh;
+    overflow-y: none;
 }
 
 .sidebar {
     box-shadow: 5px 0px 9px 0px rgba(0,0,0,0.63);
     -webkit-box-shadow: 5px 0px 9px 0px rgba(0,0,0,0.63);
     -moz-box-shadow: 5px 0px 9px 0px rgba(0,0,0,0.63);
-   
 }
 
 .content {
     margin-top: 2.5em;
+    text-align: center;
 }
 
 .lineseparator {
@@ -20,26 +21,26 @@
 }
 
 ul {
-    margin: 1em;
     padding: 1em;
 }
 
 li{
-    margin: 1em;
-    margin-left: 2em;
+    margin-top: 1em;
+    margin-right: 1em;
     font-size: 1em;
     letter-spacing: 0.05px;
-    align-items: center;
-}
-
-img{
-    margin-left: 1em;
 }
 
 button {
+    display: flex;
     color: white;
     cursor: pointer;
-    margin-left: 2em;
+    margin-left: 1em;
+    align-items: center;
+}
+
+p {
+    margin-left: 1em;
 }
 
 .buttonAnimate{
@@ -47,7 +48,9 @@ button {
     border-image-slice: 1;
     border-image-source: linear-gradient(360deg, #743ad5, #d53a9d);
     animation: animate 1s linear infinite;
-    padding: 0.3em; 
+    padding: 0.2em; 
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 @keyframes animate {
 
