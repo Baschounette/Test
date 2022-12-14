@@ -1,1 +1,20 @@
-<p>sidebar works!</p>
+<mat-drawer-container class="sidenav">
+    <mat-drawer mode="side" opened class="sidebar">
+        <ul>
+            <hr class="lineseparator">
+            <li> <button (click)="displayProfil()">Profil</button> </li>
+            <li> <button (click)="displayMyReservation()" >Mes commandes</button> </li>
+            <li> <button (click)="displaySupport()" >Support</button> </li>
+            <hr class="lineseparator">
+            <li> <button (click)="displayAdmin()" >Pannel admin</button> </li>
+            <li> <button (click)="displayAddProduct()" >Ajouter un Produit</button> </li>
+            <li> <button (click)="displayUsers()">Utilisateurs</button> </li>
+            <li> <button (click)="displayReservation()" >Commandes</button> </li>
+            <hr class="lineseparator">
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content class="content">
+        <app-add-product *ngIf="isDisplayAddProduct"></app-add-product>
+        <app-adminboard *ngIf="isDisplayAdmin"></app-adminboard>
+    </mat-drawer-content>
+</mat-drawer-container>

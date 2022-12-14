@@ -1,0 +1,36 @@
+.sidenav {
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar {
+    box-shadow: 5px 0px 9px 0px rgba(0,0,0,0.63);
+    -webkit-box-shadow: 5px 0px 9px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 5px 0px 9px 0px rgba(0,0,0,0.63);
+   
+}
+
+.content {
+    margin-top: 2.5em;
+}
+
+.lineseparator {
+    border-top: 2px solid #bbb;
+    border-radius: 4px;
+}
+
+ul {
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+}
+
+li{
+    margin: 1em;
+    font-size: 1em;
+    letter-spacing: 0.05px;
+}
+
+button {
+    color: white;
+}

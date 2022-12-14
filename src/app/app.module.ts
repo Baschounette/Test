@@ -17,6 +17,13 @@ import { AddProductComponent } from './components/Logged/add-product/add-product
 import { AdminboardComponent } from './components/Logged/adminboard/adminboard.component';
 import { Register3Component } from './components/register3/register3.component';
 import { SidebarComponent } from './components/Logged/sidebar/sidebar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { ProfilComponent } from './components/Logged/profil/profil.component';
+import { MyReservationComponent } from './components/Logged/my-reservation/my-reservation.component';
+import { SupportComponent } from './components/Logged/support/support.component';
+import { UsersComponent } from './components/Logged/users/users.component';
+import { ReservationComponent } from './components/Logged/reservation/reservation.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +40,19 @@ import { SidebarComponent } from './components/Logged/sidebar/sidebar.component'
     AddProductComponent,
     AdminboardComponent,
     SidebarComponent,
+    ProfilComponent,
+    MyReservationComponent,
+    SupportComponent,
+    UsersComponent,
+    ReservationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
