@@ -26,8 +26,10 @@
             <a routerLink="/login">Identifie toi !</a>
         </div>
         
-        <div>
-            <div class="cgu"> Veuillez accepter les conditions générales d'utilisation (CGU).</div>
+        <div class="cgu">
+            <p [ngClass]="{'checkBoxCheck' : checkBoxCheck === true,
+        'checkBoxDefault' : checkBoxCheck === false,
+            'checkBoxNotCheck' : checkboxNotCheck === true && checkBoxCheck === false}">Veuillez accepter les conditions générales d'utilisation (CGU).</p>
             <input class="checkbox" type="checkbox" name="validate" id="checkbox" ngModel required>
         </div>
 

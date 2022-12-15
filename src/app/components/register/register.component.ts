@@ -11,11 +11,20 @@ export class RegisterComponent implements OnInit {
 
   public passwordDifferent: boolean = false;
   public checkboxNotCheck: boolean = false;
+  public checkBoxCheck = false;
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    
+    const checkbox = document.getElementById('checkbox') as HTMLInputElement | null;
+    if(checkbox != null){
+      if(checkbox?.checked){
+        this.checkBoxCheck = true
+      } else {
+        this.checkBoxCheck = false
+      }
+    }
+  
   }
   
   addUser(user: NgForm){
@@ -29,6 +38,7 @@ export class RegisterComponent implements OnInit {
     } else {
       this.checkboxNotCheck = true;
       console.log("Non check")
+      this.checkBoxCheck = false;
     }
   }
 }
