@@ -53,10 +53,10 @@
 @keyframes animate {
 	0%
 	{
-		background: rotate(0deg);
+		transform: rotate(0deg);
 	}	
 	100% {
-		background: rotate(360deg);
+		transform: rotate(360deg);
 	}
 }
 

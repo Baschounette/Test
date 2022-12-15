@@ -1,49 +1,45 @@
 <div class="addProduct">
     <form (ngSubmit)="addProduct(product)" #product="ngForm">
-        <h1 class="titre2">Ajouter un Champion</h1>
-        <div>
-            <label for="name"> Nom du champion </label>
-            <div>
-                <input type="text" placeholder="Saisir un nom" name="name" ngModel required>
-            </div>
+        <h2>Ajouter un Champion</h2>
+        <div class="inputName">
+            <input type="text" name="name" minlength="4" maxlength="16" ngModel required>
+            <span> Nom du champion </span>
+            <i></i>
         </div>
-        <div>
-            <label for="image"> Image </label>
-            <div>
-                <input type="text" placeholder="Lien de l'image" name="image" ngModel required>
-            </div>
+           
+        <div class="inputImage">
+            <input type="text" name="image" ngModel required>
+            <span> Image </span>
+            <i></i>
         </div>
-        <div>
-            <label for="lore"> Lore </label>
-            <div>
-                <input type="text" placeholder="Saisir une description" name="lore" ngModel required>
-            </div>
+
+        <div class="inputLore">
+            <input type="text" name="lore" size="45" ngModel required>
+            <span> Lore </span>
+            <i></i>
         </div>
-        <div>
-            <label for="price"> Price </label> 
-            <div>
-                <input type="number" placeholder="Saisir un prix" name="price" ngModel required>
-            </div>
+    
+        <div class="inputPrice">
+            <input type="number" name="price" ngModel required>
+            <span> Price </span> 
+            <i></i>
         </div>
-        <div>
-            <label for="available"> Disponible ? </label> 
-            <div>
-                <input type="checkbox" name="available" ngModel required>
-            </div>
+ 
+        <div class="inputAvailable">
+            <input class="checkbox" type="checkbox" name="available" ngModel required>
+            <span> Disponible ? </span>
         </div>
-        <div>
-            <label for="type"> Type de champion </label> 
-            <div>
-                <select [(ngModel)]="ngDropdown" name="type" ngModel required>
-                    <option value="Type du champion">Type du champion</option>
-                    <option value="Assassin">Assassin</option>
-                    <option value="Mage">Mage</option>
-                    <option value="Tireur">Tireur</option>
-                    <option value="Support">Support</option>
-                    <option value="Tank">Tank</option>
-                    <option value="Combattant">Combattant</option>
-                </select>
-            </div>
+    
+        <div class="Select">
+            <select [(ngModel)]="ngDropdown" name="type" ngModel required>
+                <option value="">Type du Champion</option>
+                <option value="Assassin">Assassin</option>
+                <option value="Mage">Mage</option>
+                <option value="Tireur">Tireur</option>
+                <option value="Support">Support</option>
+                <option value="Tank">Tank</option>
+                <option value="Combattant">Combattant</option>
+            </select> 
         </div>
     
         <div>
