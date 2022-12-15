@@ -75,10 +75,16 @@ h2 {
 	letter-spacing: 0.1em;
 }
 
-.inputName, .inputImage, .inputLore, .inputPrice {
+.inputName, .inputImage, .inputPrice {
 	position: relative;
 	width: 300px;
 	margin-top: 35px;
+}
+
+.inputLore {
+    position: relative;
+	width: 300px;
+	margin-top: 105px;
 }
 
 .inputAvailable {
@@ -96,6 +102,8 @@ h2 {
 .Select {
     margin-top: 35px;
     text-align: left;  
+    width: 25px;
+    height: 25px;
 }
 
 .inputName input, .inputImage input, .inputLore input, .inputPrice input {
@@ -142,7 +150,7 @@ h2 {
 .inputLore input:valid ~ span,
 .inputLore input:focus ~ span {
 	color: #45f3ff;
-	transform: translateX(0px) translateY(-34px);
+	transform: translateX(0px) translateY(-112px);
 	font-size: 0.75em;
 }
 
