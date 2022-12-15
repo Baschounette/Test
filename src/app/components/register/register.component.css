@@ -1,13 +1,79 @@
 .register{
     text-align: center;
     background-color: #1c1c1c;
-    width: fit-content;
+    width: 380px;
+	height: 540px;
     margin: auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
 }
 
-h1{
-    color: aqua;
+.body {
+	display: flex;
+	justify-content: top;
+    margin-top: 10%;
+	align-items: center;
+	min-height: 100vh;
+	flex-direction: column;
 }
+
+.register::before{
+    content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 540px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#e31212,#e31212);
+	animation: animating 6s linear infinite;
+}
+
+.register::after {
+    content: '';
+	z-index: 1;
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 540px;
+	transform-origin: bottom right;
+	background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+	animation: animating 6s linear infinite;
+	animation-delay: -3s;
+}
+
+@keyframes animating {
+	0%
+	{
+		transform: rotate(0deg);
+	}	
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+form {
+	position: absolute;
+	inset: 2px;
+	background: #28292d;
+	padding: 50px 40px;
+	border-radius: 8px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+}
+
+.title{
+    color: aqua;
+    font-size: x-large;
+    overflow: none;
+    margin-top: -0.5em;
+}
+
 .inputBox{
     display: flex;
     flex-direction: column-reverse;
@@ -19,6 +85,7 @@ h1{
 input, label, button {
     translate: all .3s;
 }
+
 label {
     transform: translate(10px , -15px);
     cursor: text;
@@ -33,6 +100,24 @@ input{
     color: red;
 }
 
+.alreadyRegister{
+    display: flex;
+    justify-content: space-between;
+}
+
+.alreadyRegister a {
+	margin: 10px 0;
+	margin-top: 2em;
+	font-size: 0.75em;
+	color: #8f8f8f;
+	text-decoration: beige;
+}
+
+.alreadyRegister a:hover, 
+.alreadyRegister a:nth-child(2) {
+	color: #e31212;
+}
+
 .cgu{
     margin-top: 1.5em;
 }
@@ -45,14 +130,16 @@ input{
 
 p, .cgu{
     color: white;
+    font-size: small;
 }
 
 button {
-    border: none;
+    border: 2px solid aqua;
     padding: 10px 15px;
-    color: white;
+    color: black;
+    font-weight: 600;
     cursor: pointer;
-    background-color: #ff9234;
+    background-color: aqua;
     margin-top: 10px;
 }
 input::placeholder {
