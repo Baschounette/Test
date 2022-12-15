@@ -2,9 +2,11 @@
     width: 100vw;
     height: 100vh;
     overflow-y: none;
+    background-color: #25273E;
 }
 
 .sidebar {
+    background-color: #25273E;
     box-shadow: 5px 0px 9px 0px rgba(0,0,0,0.63);
     -webkit-box-shadow: 5px 0px 9px 0px rgba(0,0,0,0.63);
     -moz-box-shadow: 5px 0px 9px 0px rgba(0,0,0,0.63);
@@ -18,6 +20,7 @@
 .lineseparator {
     border-top: 2px solid #bbb;
     border-radius: 4px;
+    margin-top: 1em;
 }
 
 ul {
