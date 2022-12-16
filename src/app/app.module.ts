@@ -21,6 +21,7 @@ import { MyReservationComponent } from './components/Logged/my-reservation/my-re
 import { SupportComponent } from './components/Logged/support/support.component';
 import { UsersComponent } from './components/Logged/users/users.component';
 import { ReservationComponent } from './components/Logged/reservation/reservation.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ReservationComponent } from './components/Logged/reservation/reservatio
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

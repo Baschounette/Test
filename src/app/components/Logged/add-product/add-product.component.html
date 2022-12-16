@@ -30,16 +30,15 @@
             <span> Disponible ? </span>
         </div>
     
-        <div class="Select">
-            <select [(ngModel)]="ngDropdown" name="type" ngModel required>
-                <option value="">Type du Champion</option>
-                <option value="Assassin">Assassin</option>
-                <option value="Mage">Mage</option>
-                <option value="Tireur">Tireur</option>
-                <option value="Support">Support</option>
-                <option value="Tank">Tank</option>
-                <option value="Combattant">Combattant</option>
-            </select> 
+        <div>
+            <mat-form-field appearance="fill" [(ngModel)]="ngDropdown" name="type" ngModel required>
+                <mat-label>Type du Champion</mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let DisplayChampionType of isDisplayChampionType" [value]="DisplayChampionType.value">
+                        {{DisplayChampionType.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
     
         <div>

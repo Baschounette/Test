@@ -3,7 +3,7 @@
     margin-right: auto;
 	position: relative;
 	width: 600px;
-	height: 680px;
+	height: 720px;
 	background: #1c1c1c;
 	border-radius: 8px;
 	overflow: hidden;
@@ -27,7 +27,7 @@
 	top: -50%;
 	left: -50%;
 	width: 600px;
-	height: 680px;
+	height: 720px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,#e31212,#e31212);
 	animation: animate 6s linear infinite;
@@ -40,7 +40,7 @@
 	top: -50%;
 	left: -50%;
 	width: 600px;
-	height: 680px;
+	height: 720px;
 	transform-origin: bottom right;
 	background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
 	animation: animate 6s linear infinite;
@@ -88,8 +88,9 @@ h2 {
 }
 
 .inputAvailable {
-    margin-top: 35px;
-    text-align: left;
+    text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
     color: #8f8f8f;
 }
 
@@ -99,11 +100,12 @@ h2 {
     vertical-align: middle; 
 }
 
-.Select {
-    margin-top: 35px;
-    text-align: left;  
-    width: 25px;
-    height: 25px;
+.select {
+    text-align: center;  
+}
+
+select:hover {
+	background-color: #45f3ff;
 }
 
 .inputName input, .inputImage input, .inputLore input, .inputPrice input {
@@ -191,6 +193,7 @@ h2 {
 .inputLore input:focus ~ i {
 	height: 122px;
 	background: #e5ff00d7;
+	text-transform: Top left;
 }
 
 .inputPrice input:valid ~ i,
@@ -204,7 +207,8 @@ button {
     font-weight: 600;
     background-color: #45f3ff;
     padding: 3%;
-    margin-top: 4%;
+	width: 100%;
+	border-radius: 5px;
 }
 button:hover {
     background-color: #e31212;
