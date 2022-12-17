@@ -202,7 +202,7 @@ select:hover {
 	background: #ff7b00;
 }
 
-button {
+.finalButton {
     color: black;
     font-weight: 600;
     background-color: #45f3ff;
@@ -210,7 +210,7 @@ button {
 	width: 100%;
 	border-radius: 5px;
 }
-button:hover {
+.finalButton:hover {
     background-color: #e31212;
 }
 

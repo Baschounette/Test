@@ -22,6 +22,9 @@ import { SupportComponent } from './components/Logged/support/support.component'
 import { UsersComponent } from './components/Logged/users/users.component';
 import { ReservationComponent } from './components/Logged/reservation/reservation.component';
 import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +51,9 @@ import {MatSelectModule} from '@angular/material/select';
     HttpClientModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatSelectModule
+    MatSelectModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

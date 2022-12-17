@@ -2,12 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Product } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
-
-
-interface DisplayChampionType {
-  value : String;
-  viewValue : String;
-}
+import {MatIconRegistry} from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-add-product',
@@ -18,7 +14,14 @@ export class AddProductComponent implements OnInit {
 
   ngDropdown = 0;
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer ) { 
+      this.matIconRegistry.addSvgIcon(
+        "sword",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("..\assets\images\logos\inconSword.svg")
+      );
+    }
   
   ngOnInit(): void {
     
@@ -29,14 +32,4 @@ export class AddProductComponent implements OnInit {
       console.log("Champion ajouté")
     })
   }
-
-  isDisplayChampionType: DisplayChampionType[] = [
-    {value: 'Type de Champion-0', viewValue: 'Type de Champion'},
-    {value: 'Assassin-1', viewValue: 'Assassin'},
-    {value: 'Mage-2', viewValue: 'Mage'},
-    {value: 'Tireur-3', viewValue: 'Tireur'},
-    {value: 'Support-4', viewValue: 'Support'},
-    {value: 'Tank-5', viewValue: 'Tank'},
-    {value: 'Combattant-6', viewValue: 'Combattant'},
-  ];
 }

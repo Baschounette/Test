@@ -31,18 +31,27 @@
         </div>
     
         <div>
-            <mat-form-field appearance="fill" [(ngModel)]="ngDropdown" name="type" ngModel required>
-                <mat-label>Type du Champion</mat-label>
-                <mat-select>
-                    <mat-option *ngFor="let DisplayChampionType of isDisplayChampionType" [value]="DisplayChampionType.value">
-                        {{DisplayChampionType.viewValue}}
-                    </mat-option>
-                </mat-select>
-            </mat-form-field>
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" [(ngModel)]="ngDropdown" name="type" ngModel required>
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon svgIcon="sword"></mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Disable alerts</span>
+                </button>
+              </mat-menu>
         </div>
     
         <div>
-            <button type="submit">Ajouter ce champion</button>
+            <button class="finalButton" type="submit">Ajouter ce champion</button>
         </div>
 
     </form>
