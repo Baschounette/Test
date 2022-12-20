@@ -17,4 +17,12 @@ import { User } from '../models/user.model';
     loginFromService(user: NgForm) {
       return this.http.get('http://localhost:8080/users/login?name=' + user.value.name + '&password=' + user.value.password)
     }
+
+    getAllUserFromService(): Observable<User[]> {
+      return this.http.get('http://localhost:8080/users/allUser') as Observable<User[]>
   }
+
+  getById(): Observable<User[]> {
+    return this.http.get('http://localhost:8080/users/getById') as Observable<User[]>
+  }
+}
