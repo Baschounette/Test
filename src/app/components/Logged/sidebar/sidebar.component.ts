@@ -9,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 
 export class SidebarComponent implements OnInit {
 
-  public isDisplayProfil = true;
+  public isDisplayProfil = false;
   public isDisplayMyReservation = false;
   public isDisplaySupport = false;
   public isDisplayAdmin = false;
-  public isDisplayAddProduct = false;
+  public isDisplayAddProduct = true;
   public isDisplayUsers = false;
   public isDisplayReservation = false;
   
