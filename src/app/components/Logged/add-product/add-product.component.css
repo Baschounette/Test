@@ -234,7 +234,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-	background-color: #09ff00;
+	background-color: #ff7b00;
 }
 
 .finalButton {
