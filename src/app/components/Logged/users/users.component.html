@@ -1,26 +1,51 @@
 <div class="generalCard">
     <div class="navBarCard">
-        <button type="submit">Validate</button>
-        <button type="submit">Not Validate</button>
+        <button (click)="getAllUserValidate()">Validate</button>
+        <button (click)="getAllUserNotValidate()">Not Validate</button>
+        <button (click)="getAllUsers()">All</button>
         <h3 class="boardTitle">Validate Users</h3>
         <!-- <h3 class="boardTitle">Not Validate Users</h3> -->
     </div>
-    
-    <div class="headerTable">
-        <div>ID</div>
-        <div>Name</div>
-        <div>Password</div>
-        <div>Mail</div>
-        <div>Role</div>
-        <div>Actions</div>
+    <div class="table">
+        <div class="tableParent">
+            <div class="cellulesHeader">ID</div>
+            <div class="cellulesHeader">Name</div>
+            <div class="cellulesHeader">Password</div>
+            <div class="cellulesHeader">Mail</div>
+            <div class="cellulesHeader">Role</div>
+            <div class="cellulesHeader">Actions</div>
+        </div>
+        <div *ngIf="validate && !all">
+            <div *ngFor="let User of usersValidate" class="tableParent">
+                <div class="cellules"> {{User.id}} </div>
+                <div class="cellules"> {{User.name}} </div>
+                <div class="cellules"> {{User.password}} </div>
+                <div class="cellules"> {{User.mail}} </div>
+                <div class="cellules"> {{User.role}} </div>
+                <div class="cellules">Actions</div>
+            </div>
+        </div>
+
+        <div *ngIf="!validate && !all">
+            <div *ngFor="let User of usersNotValidate" class="tableParent">
+                <div class="cellules"> {{User.id}} </div>
+                <div class="cellules"> {{User.name}} </div>
+                <div class="cellules"> {{User.password}} </div>
+                <div class="cellules"> {{User.mail}} </div>
+                <div class="cellules"> {{User.role}} </div>
+                <div class="cellules">Actions</div>
+            </div>
+        </div>
+        <div *ngIf="all">
+            <div *ngFor="let User of users" class="tableParent">
+                <div class="cellules"> {{User.id}} </div>
+                <div class="cellules"> {{User.name}} </div>
+                <div class="cellules"> {{User.password}} </div>
+                <div class="cellules"> {{User.mail}} </div>
+                <div class="cellules"> {{User.role}} </div>
+                <div class="cellules">Actions</div>
+            </div>
+        </div>
     </div>
     
-    <div *ngFor="let User of users" class="tableParent">
-        <div class="div1"> {{User.id}} </div>
-        <div class="div2"> {{User.name}} </div>
-        <div class="div3"> {{User.password}} </div>
-        <div class="div4"> {{User.mail}} </div>
-        <div class="div5"> {{User.role}} </div>
-        <div class="div6">Actions</div>
-    </div>
 </div>

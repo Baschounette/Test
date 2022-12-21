@@ -5,21 +5,30 @@ import { Observable } from 'rxjs';
 import { User } from '../models/user.model';
 
 @Injectable({
-    providedIn: 'root'
-  })
-  export class UserService {
-    constructor(private http:HttpClient) { }
+  providedIn: 'root'
+})
 
-    addUserFromService(user: User){
-        return this.http.post('http://localhost:8080/users/addUser', user)
-    }
+export class UserService {
+  constructor(private http:HttpClient) { }
 
-    loginFromService(user: NgForm) {
-      return this.http.get('http://localhost:8080/users/login?name=' + user.value.name + '&password=' + user.value.password)
-    }
+  addUserFromService(user: User){
+    return this.http.post('http://localhost:8080/users/addUser', user)
+  }
 
-    getAllUserFromService(): Observable<User[]> {
-      return this.http.get('http://localhost:8080/users/allUser') as Observable<User[]>
+  loginFromService(user: NgForm) {
+    return this.http.get('http://localhost:8080/users/login?name=' + user.value.name + '&password=' + user.value.password)
+  }
+
+  getAllUserFromService(): Observable<User[]> {
+    return this.http.get('http://localhost:8080/users/allUser') as Observable<User[]>
+  }
+
+  getAllUserValidateFromService(): Observable<User[]> {
+    return this.http.get('http://localhost:8080/users/allUserValidate') as Observable<User[]>
+  }
+
+  getAllUserNotValidateFromService(): Observable<User[]> {
+    return this.http.get('http://localhost:8080/users/allUserNotValidate') as Observable<User[]>
   }
 
   getById(): Observable<User[]> {
