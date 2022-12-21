@@ -13,8 +13,8 @@ export class SidebarComponent implements OnInit {
   public isDisplayMyReservation = false;
   public isDisplaySupport = false;
   public isDisplayAdmin = false;
-  public isDisplayAddProduct = false;
-  public isDisplayUsers = true;
+  public isDisplayAddProduct = true;
+  public isDisplayUsers = false;
   public isDisplayReservation = false;
   
 

@@ -3,22 +3,12 @@
     margin-right: auto;
 	position: relative;
 	width: 600px;
-	height: 720px;
+	height: 790px;
 	background: #1c1c1c;
 	border-radius: 8px;
 	overflow: hidden;
     font-family: 'Poppins', sans-serif;
 }
-
-.body {
-	display: flex;
-	justify-content: top;
-    margin-top: 10%;
-	align-items: center;
-	min-height: 100vh;
-	flex-direction: column;
-}
-
 
 .addProduct::before {
 	content: '';
@@ -61,7 +51,7 @@ form {
 	position: absolute;
 	inset: 2px;
 	background: #28292d;
-	padding: 50px 40px;
+	padding: 30px;
 	border-radius: 8px;
 	z-index: 2;
 	display: flex;
@@ -75,37 +65,47 @@ h2 {
 	letter-spacing: 0.1em;
 }
 
-.inputName, .inputImage, .inputPrice {
+.inputImage, .inputPrice, .inputLore {
 	position: relative;
-	width: 300px;
+	width: 400px;
 	margin-top: 35px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-.inputLore {
-    position: relative;
-	width: 300px;
-	margin-top: 105px;
+.inputName {
+	position: relative;
+	width: 400px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .inputAvailable {
     text-align: center;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 35px;
+	margin-bottom: 20px;
     color: #8f8f8f;
 }
 
-.checkbox{
-    width: 25px;
-    height: 25px;
-    vertical-align: middle; 
+input[type="checkbox"] {
+	vertical-align: middle; 
+	margin-left: 20px;
+	
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+  
+	border-radius: 5px;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #45f3ff;
+	transition: 0.2s all linear;
+	cursor: pointer;
 }
 
-.select {
-    text-align: center;  
-}
-
-select:hover {
-	background-color: #45f3ff;
+input[type="checkbox"]:checked {
+	background-color: #09ff00;
 }
 
 .inputName input, .inputImage input, .inputLore input, .inputPrice input {
@@ -137,28 +137,28 @@ select:hover {
 
 .inputName input:valid ~ span,
 .inputName input:focus ~ span {
-	color: #45f3ff;
+	color: #a44179;
 	transform: translateX(0px) translateY(-34px);
 	font-size: 0.75em;
 }
 
 .inputImage input:valid ~ span,
 .inputImage input:focus ~ span {
-	color: #45f3ff;
+	color: #09ff00;
 	transform: translateX(0px) translateY(-34px);
 	font-size: 0.75em;
 }
 
 .inputLore input:valid ~ span,
 .inputLore input:focus ~ span {
-	color: #45f3ff;
-	transform: translateX(0px) translateY(-112px);
+	color: #e5ff00d7;
+	transform: translateX(0px) translateY(-34px);
 	font-size: 0.75em;
 }
 
 .inputPrice input:valid ~ span,
 .inputPrice input:focus ~ span {
-	color: #45f3ff;
+	color: #ff7b00;
 	transform: translateX(0px) translateY(-34px);
 	font-size: 0.75em;
 }
@@ -180,7 +180,7 @@ select:hover {
 .inputName input:valid ~ i,
 .inputName input:focus ~ i {
 	height: 44px;
-	background: #45f3ff;
+	background: #a44179;
 }
 
 .inputImage input:valid ~ i,
@@ -191,9 +191,8 @@ select:hover {
 
 .inputLore input:valid ~ i,
 .inputLore input:focus ~ i {
-	height: 122px;
+	height: 44px;
 	background: #e5ff00d7;
-	text-transform: Top left;
 }
 
 .inputPrice input:valid ~ i,
@@ -202,14 +201,54 @@ select:hover {
 	background: #ff7b00;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.type {
+	margin-bottom: 35px;
+	color: #8f8f8f;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+input[type="radio"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+  
+	border-radius: 5px;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #45f3ff;
+	transition: 0.2s all linear;
+	cursor: pointer;
+}
+
+input[type="radio"]:checked {
+	background-color: #ff7b00;
+}
+
 .finalButton {
     color: black;
     font-weight: 600;
     background-color: #45f3ff;
     padding: 3%;
-	width: 100%;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
 	border-radius: 5px;
+	cursor: pointer;
 }
+
 .finalButton:hover {
     background-color: #e31212;
 }

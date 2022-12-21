@@ -2,52 +2,59 @@
     <form (ngSubmit)="addProduct(product)" #product="ngForm">
         <h2>Ajouter un Champion</h2>
         <div class="inputName">
-            <input type="text" name="name" minlength="4" maxlength="16" ngModel required>
+            <input autocomplete="off" type="text" name="name" minlength="4" maxlength="16" ngModel required>
             <span> Nom du champion </span>
             <i></i>
         </div>
            
         <div class="inputImage">
-            <input type="text" name="image" ngModel required>
+            <input autocomplete="off" type="text" name="image" ngModel required>
             <span> Image </span>
             <i></i>
         </div>
 
         <div class="inputLore">
-            <input type="text" name="lore" size="45" ngModel required>
+            <input autocomplete="off" type="text" name="lore" ngModel required>
             <span> Lore </span>
             <i></i>
         </div>
-    
+
         <div class="inputPrice">
-            <input type="number" name="price" ngModel required>
+            <input autocomplete="off" type="number" name="price" ngModel required>
             <span> Price </span> 
             <i></i>
         </div>
  
         <div class="inputAvailable">
-            <input class="checkbox" type="checkbox" name="available" ngModel required>
-            <span> Disponible ? </span>
+            <span>Disponible ?</span>
+            <input type="checkbox" name="available" ngModel required>
         </div>
     
-        <div>
-            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" [(ngModel)]="ngDropdown" name="type" ngModel required>
-                <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>
-                  <mat-icon svgIcon="sword"></mat-icon>
-                  <span>Redial</span>
-                </button>
-                <button mat-menu-item disabled>
-                  <mat-icon>voicemail</mat-icon>
-                  <span>Check voice mail</span>
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>notifications_off</mat-icon>
-                  <span>Disable alerts</span>
-                </button>
-              </mat-menu>
+        <div class="type">
+            <label class="type1">
+                <p>Mage</p>
+                <input type="radio" name="type" value="Mage" ngModel required>
+            </label>
+            <label class="type2">
+                <p>Combattant</p>
+                <input type="radio" name="type" value="Combattant" ngModel required>
+            </label>
+            <label class="type3">
+                <p>Assassin</p>
+                <input type="radio" name="type" value="Assassin" ngModel required>
+            </label>
+            <label class="type4">
+                <p>Tank</p>
+                <input type="radio" name="type" value="Tank" ngModel required>
+            </label>
+            <label class="type5">
+                <p>Support</p>
+                <input type="radio" name="type" value="Support" ngModel required>
+            </label>
+            <label class="type6">
+                <p>Tireur</p>
+                <input type="radio" name="type" value="Tireur" ngModel required>
+            </label>
         </div>
     
         <div>
