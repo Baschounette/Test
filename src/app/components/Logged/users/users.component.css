@@ -3,6 +3,8 @@
     margin-left: 5em;
     border: 2px solid black;
     border-radius: 4px;
+    color: #45f3ff;
+    background: #28292d;
 }
 
 .navBarCard{
@@ -12,11 +14,13 @@
     margin: 1em;
 }
 
-h3.boardTitle{
-    margin-left: 27em;
-    border: 2px solid black;
-    border-radius: 4px;
+.boardTitle{
+    margin-left: auto;
+    margin-right: auto;
+    color: #ff7b00;
     padding: 0.5em;
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
 }
 
 button {
@@ -30,7 +34,12 @@ button {
     color: black;
 }
 
-.parent {
+.headerTable {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    }
+    
+.tableParent {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 1fr;

@@ -5,13 +5,22 @@
         <h3 class="boardTitle">Validate Users</h3>
         <!-- <h3 class="boardTitle">Not Validate Users</h3> -->
     </div>
-    <div *ngFor="let User of users" class="parent">
+    
+    <div class="headerTable">
+        <div>ID</div>
+        <div>Name</div>
+        <div>Password</div>
+        <div>Mail</div>
+        <div>Role</div>
+        <div>Actions</div>
+    </div>
+    
+    <div *ngFor="let User of users" class="tableParent">
         <div class="div1"> {{User.id}} </div>
         <div class="div2"> {{User.name}} </div>
         <div class="div3"> {{User.password}} </div>
         <div class="div4"> {{User.mail}} </div>
         <div class="div5"> {{User.role}} </div>
-        <div class="div6"> {{User.statut}} </div>
-        <div class="div7"> Validate By Admin </div>
-        </div>
+        <div class="div6">Actions</div>
+    </div>
 </div>
