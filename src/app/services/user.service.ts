@@ -31,7 +31,11 @@ export class UserService {
     return this.http.get('http://localhost:8080/users/allUserNotValidate') as Observable<User[]>
   }
 
-  getById(): Observable<User[]> {
+  getByIdFromService(): Observable<User[]> {
     return this.http.get('http://localhost:8080/users/getById') as Observable<User[]>
+  }
+
+  deleteUserFromService(user: User) {
+    return this.http.delete('http://localhost:8080/users/deleteUser?id=' + user.id) 
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-users',
@@ -43,6 +44,13 @@ export class UsersComponent implements OnInit {
     this.validate = false;
     this.all = true;
   }
+
+  deleteUsers(user: User){
+    this.userService.deleteUserFromService(user).subscribe(data => {
+      console.log("Utilisateur supprimé");
+    })
+  }
+  
 
   // getAllUserValidate(){
   //   this.userService.getAllUserValidateFromService().subscribe((res: User[]) => {

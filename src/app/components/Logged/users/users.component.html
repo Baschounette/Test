@@ -2,16 +2,16 @@
     <div class="navBarCard">
         <button (click)="getAllUserValidate()">Validate</button>
         <button (click)="getAllUserNotValidate()">Not Validate</button>
-        <button (click)="getAllUsers()">All</button>
-        <h3 class="boardTitle">Validate Users</h3>
-        <!-- <h3 class="boardTitle">Not Validate Users</h3> -->
+        <!-- <button (click)="getAllUsers()">All</button> -->
+        <h3 class="boardTitle">Utilisateurs confirmés</h3>
+        <!-- <h3 class="boardTitle">Utilisateurs non validé</h3> -->
     </div>
     <div class="table">
         <div class="tableParent">
             <div class="cellulesHeader">ID</div>
-            <div class="cellulesHeader">Name</div>
-            <div class="cellulesHeader">Password</div>
-            <div class="cellulesHeader">Mail</div>
+            <div class="cellulesHeader">Pseudo</div>
+            <div class="cellulesHeader">Mot de passe</div>
+            <div class="cellulesHeader">E-mail</div>
             <div class="cellulesHeader">Role</div>
             <div class="cellulesHeader">Actions</div>
         </div>
@@ -22,7 +22,11 @@
                 <div class="cellules"> {{User.password}} </div>
                 <div class="cellules"> {{User.mail}} </div>
                 <div class="cellules"> {{User.role}} </div>
-                <div class="cellules">Actions</div>
+                <div class="cellules">
+                    <button (click)="deleteUsers(User)">delete</button>
+                <button>
+
+                </button></div>
             </div>
         </div>
 
@@ -33,7 +37,10 @@
                 <div class="cellules"> {{User.password}} </div>
                 <div class="cellules"> {{User.mail}} </div>
                 <div class="cellules"> {{User.role}} </div>
-                <div class="cellules">Actions</div>
+                <div class="cellules"><button (click)="deleteUsers(User)">delete</button>
+                    <button>
+    
+                    </button></div>
             </div>
         </div>
         <div *ngIf="all">
