@@ -9,6 +9,10 @@ import { User } from '../models/user.model';
 })
 
 export class UserService {
+
+  public userLogged: User | undefined
+  public isAdmin = false
+
   constructor(private http:HttpClient) { }
 
   addUserFromService(user: User){
@@ -17,6 +21,10 @@ export class UserService {
 
   loginFromService(user: NgForm) {
     return this.http.get('http://localhost:8080/users/login?name=' + user.value.name + '&password=' + user.value.password)
+  }
+
+  getInfoForLoggedFromService(user: NgForm): Observable<User> {
+    return this.http.get('http://localhost:8080/users/getInfoForLogged?name=' + user.value.name + '&password=' + user.value.password) as Observable<User>
   }
 
   getAllUserFromService(): Observable<User[]> {
@@ -36,6 +44,8 @@ export class UserService {
   }
 
   deleteUserFromService(user: User) {
-    return this.http.delete('http://localhost:8080/users/deleteUser?id=' + user.id) 
+    return this.http.delete('http://localhost:8080/users/deleteUser/' + user.id) 
   }
+
+  
 }

@@ -2,7 +2,6 @@
     <div class="navBarCard">
         <button (click)="getAllUserValidate()">Validate</button>
         <button (click)="getAllUserNotValidate()">Not Validate</button>
-        <!-- <button (click)="getAllUsers()">All</button> -->
         <h3 class="boardTitle">Utilisateurs confirmés</h3>
         <!-- <h3 class="boardTitle">Utilisateurs non validé</h3> -->
     </div>
@@ -15,7 +14,7 @@
             <div class="cellulesHeader">Role</div>
             <div class="cellulesHeader">Actions</div>
         </div>
-        <div *ngIf="validate && !all">
+        <div *ngIf="validate">
             <div *ngFor="let User of usersValidate" class="tableParent">
                 <div class="cellules"> {{User.id}} </div>
                 <div class="cellules"> {{User.name}} </div>
@@ -24,13 +23,11 @@
                 <div class="cellules"> {{User.role}} </div>
                 <div class="cellules">
                     <button (click)="deleteUsers(User)">delete</button>
-                <button>
-
-                </button></div>
+                    <button></button>
+                </div>
             </div>
         </div>
-
-        <div *ngIf="!validate && !all">
+        <div *ngIf="!validate">
             <div *ngFor="let User of usersNotValidate" class="tableParent">
                 <div class="cellules"> {{User.id}} </div>
                 <div class="cellules"> {{User.name}} </div>
@@ -38,21 +35,11 @@
                 <div class="cellules"> {{User.mail}} </div>
                 <div class="cellules"> {{User.role}} </div>
                 <div class="cellules"><button (click)="deleteUsers(User)">delete</button>
-                    <button>
+                    <button> </button>
+                </div>
+            </div>
+        </div>
     
-                    </button></div>
-            </div>
-        </div>
-        <div *ngIf="all">
-            <div *ngFor="let User of users" class="tableParent">
-                <div class="cellules"> {{User.id}} </div>
-                <div class="cellules"> {{User.name}} </div>
-                <div class="cellules"> {{User.password}} </div>
-                <div class="cellules"> {{User.mail}} </div>
-                <div class="cellules"> {{User.role}} </div>
-                <div class="cellules">Actions</div>
-            </div>
-        </div>
     </div>
     
 </div>

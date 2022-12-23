@@ -15,23 +15,23 @@
                   <img src="../assets/images/logos/support.png"><p>Support</p></button> 
             </li>
             <hr class="lineseparator">                                                  
-            <li>
+            <li *ngIf="isAdmin">
                  <button (click)="displayAdmin()" [ngClass]="{'buttonAnimate' : isDisplayAdmin}">
                   <img src="../assets/images/logos/admin.png"><p>Pannel admin</p></button> 
             </li>
-            <li>
+            <li *ngIf="isAdmin">
                  <button (click)="displayAddProduct()" [ngClass]="{'buttonAnimate' : isDisplayAddProduct}">
                   <img src="../assets/images/logos/addproduct.png"><p>Ajouter un Produit</p></button> 
             </li>
-            <li>
+            <li *ngIf="isAdmin">
                  <button (click)="displayUsers()" [ngClass]="{'buttonAnimate' : isDisplayUsers}">
                   <img src="../assets/images/logos/users.png"><p>Utilisateurs</p></button>
             </li>
-            <li> 
+            <li *ngIf="isAdmin"> 
                 <button (click)="displayReservation()" [ngClass]="{'buttonAnimate' : isDisplayReservation}">
                  <img src="../assets/images/logos/reservation.png"><p>Commandes</p></button>
             </li>
-            <hr class="lineseparator">
+            <hr class="lineseparator" *ngIf="isAdmin">
         </ul>
     </mat-drawer>
     <mat-drawer-content class="content">
