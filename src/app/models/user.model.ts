@@ -5,4 +5,5 @@ export interface User {
     mail: string;
     role: string;
     statut: boolean;
+    validateByAdmin: boolean;
 }
