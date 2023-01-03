@@ -25,6 +25,14 @@ export class LoginComponent implements OnInit {
     this.userService.loginFromService(user).subscribe((res) => {
       console.log(res)
       if(res == 1) {
+        this.userService.getInfoForLoggedFromService(user).subscribe((res) => {
+          this.userService.userLogged = res  
+          if(this.userService.userLogged.role === "admin"){
+            this.userService.isAdmin = true
+          } else {
+            this.userService.isAdmin = false
+          }      
+        })
         this.router.navigate(["sidebar"])
       } else if(res == 2) {
         console.log("Pas encore validé, dommage :'(")

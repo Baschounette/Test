@@ -14,7 +14,6 @@ export class UsersComponent implements OnInit {
   public usersValidate: User[] | undefined;
   public usersNotValidate: User[] | undefined; 
   public validate = false;
-  public all = false;
 
   constructor(private userService: UserService) { }
   
@@ -31,36 +30,22 @@ export class UsersComponent implements OnInit {
   getAllUserValidate(){
     this.usersValidate = this.users?.filter(user => user.validateByAdmin === true)
     this.validate = true;
-    this.all = false;
   }
 
   getAllUserNotValidate(){
     this.usersNotValidate = this.users?.filter(user => user.validateByAdmin === false)
     this.validate = false;
-    this.all = false;
-  }
-
-  getAllUsers(){
-    this.validate = false;
-    this.all = true;
   }
 
   deleteUsers(user: User){
     this.userService.deleteUserFromService(user).subscribe(data => {
       console.log("Utilisateur supprimé");
+      this.ngOnInit();
+      if(this.validate) {
+        this.getAllUserValidate();
+      } else {
+        this.getAllUserNotValidate();
+      }
     })
   }
-  
-
-  // getAllUserValidate(){
-  //   this.userService.getAllUserValidateFromService().subscribe((res: User[]) => {
-  //     this.users = res;
-  //   })
-  // }
-
-  // getAllUserNotValidate(){
-  //   this.userService.getAllUserNotValidateFromService().subscribe((res: User[]) => {
-  //     this.users = res;
-  //   })
-  // }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
  
 
 @Component({
@@ -16,12 +17,14 @@ export class SidebarComponent implements OnInit {
   public isDisplayAddProduct = false;
   public isDisplayUsers = true;
   public isDisplayReservation = false;
+
+  public isAdmin = false;
   
 
-  constructor () { }
+  constructor (private userService: UserService) { }
 
   ngOnInit(): void {
-    
+    this.isAdmin = this.userService.isAdmin
   }
 
   changeButton() {
