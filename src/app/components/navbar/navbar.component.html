@@ -5,11 +5,11 @@
         </li>
     </div>
     <div class="but">
-        <li><button routerLink="sidebar" type="button">Sidebar</button></li>
+        <!-- <li><button routerLink="sidebar" type="button">Sidebar</button></li> -->
         <li><button routerLink="homepage" type="button">Accueil</button></li>
         <li><button routerLink="products" type="button">Produits</button></li>
-        <li><button routerLink="login" type="button">Se connecter</button></li>
-        <li><button routerLink="register" type="button">S'inscrire</button></li>
+        <li><button *ngIf="!connected" routerLink="login" type="button">Se connecter</button></li>
+        <li><button *ngIf="!connected" routerLink="register" type="button">S'inscrire</button></li>
         <li><button *ngIf="connected" (click)="deconnect()" type="button">Se Déconnecter</button></li>
     </div>
 </ul>
