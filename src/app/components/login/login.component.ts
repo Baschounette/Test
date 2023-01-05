@@ -1,6 +1,7 @@
 import { Component, OnInit, resolveForwardRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service/public-api';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   public loginNotValidate = false;
 
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router, private cookieService: CookieService) { }
 
   ngOnInit(): void {
       
@@ -26,14 +27,12 @@ export class LoginComponent implements OnInit {
       console.log(res)
       if(res == 1) {
         this.userService.getInfoForLoggedFromService(user).subscribe((res) => {
-          this.userService.userLogged = res  
-          if(this.userService.userLogged.role === "admin"){
-            this.userService.isAdmin = true
-          } else {
-            this.userService.isAdmin = false
-          }      
+          this.cookieService.set('CookieRole', res.role, 1)
         })
-        this.router.navigate(["sidebar"])
+        this.router.navigate(["sidebar"]);
+        setTimeout(() => {
+          location.reload()
+        }, 100);
       } else if(res == 2) {
         console.log("Pas encore validé, dommage :'(")
         this.loginNotValidate = true;

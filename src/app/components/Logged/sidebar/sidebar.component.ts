@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service/lib/cookie.service';
+import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
  
 
@@ -8,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./sidebar.component.css']
 })
 
-export class SidebarComponent implements OnInit {
+export class SidebarComponent implements OnInit, OnChanges {
 
   public isDisplayProfil = false;
   public isDisplayMyReservation = false;
@@ -19,12 +21,21 @@ export class SidebarComponent implements OnInit {
   public isDisplayReservation = false;
 
   public isAdmin = false;
+
+  public userLogged!: User;
   
 
-  constructor (private userService: UserService) { }
+  constructor (private userService: UserService, private cookieService: CookieService) { }
 
   ngOnInit(): void {
-    this.isAdmin = this.userService.isAdmin
+    this.userLogged.role = this.cookieService.get('CookieRole')
+    if (this.userLogged?.role === 'admin') {
+      this.isAdmin = true;
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+
   }
 
   changeButton() {

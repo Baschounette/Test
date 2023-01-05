@@ -24,6 +24,7 @@ import { ReservationComponent } from './components/Logged/reservation/reservatio
 import {MatSelectModule} from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import { CookieService } from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -55,7 +56,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatMenuModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
