@@ -1,9 +1,10 @@
 <div class="generalCard">
     <div class="navBarCard">
-        <button (click)="getAllUserValidate()">Validate</button>
-        <button (click)="getAllUserNotValidate()">Not Validate</button>
-        <h3 class="boardTitle">Utilisateurs confirmés</h3>
-        <!-- <h3 class="boardTitle">Utilisateurs non validé</h3> -->
+        <button (click)="getAllUserNotValidate()">Utilisateurs non validé</button>
+        <button (click)="getAllUserValidate()">Utilisateurs validé</button>
+        <h3 class="boardTitle" *ngIf="text"></h3>
+        <h3 class="boardTitle" *ngIf="validate && !text">Utilisateurs confirmés</h3>
+        <h3 class="boardTitle" *ngIf="!validate && !text">Utilisateurs non validé</h3>
     </div>
     <div class="table">
         <div class="tableParent">
@@ -22,8 +23,7 @@
                 <div class="cellules"> {{User.mail}} </div>
                 <div class="cellules"> {{User.role}} </div>
                 <div class="cellules">
-                    <button (click)="deleteUsers(User)">delete</button>
-                    <button></button>
+                    <img src="../assets/images/logos/remove.png" (click)="deleteUsers(User)" class="delete">
                 </div>
             </div>
         </div>
@@ -34,8 +34,9 @@
                 <div class="cellules"> {{User.password}} </div>
                 <div class="cellules"> {{User.mail}} </div>
                 <div class="cellules"> {{User.role}} </div>
-                <div class="cellules"><button (click)="deleteUsers(User)">delete</button>
-                    <button> </button>
+                <div class="cellules">
+                    <img src="../assets/images/logos/verifie.png" class="validation" (click)="userValidateByAdmin(User)">
+                    <img src="../assets/images/logos/remove.png" (click)="deleteUsers(User)" class="delete">
                 </div>
             </div>
         </div>

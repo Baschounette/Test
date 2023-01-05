@@ -44,7 +44,7 @@ button {
     column-gap: 1em;
     grid-template-columns: 0.5fr 1.5fr 2fr 3fr 0.5fr 2fr;
     margin-bottom: 0.25em;
-    margin-top: 0.25em;
+    margin-top: 0.25em
 }
     
 .cellulesHeader {
@@ -54,6 +54,7 @@ button {
     color: #45f3ff;
     border-bottom: 2px solid #bbb;
     border-radius: 4px;
+    
 }
 
 .cellules {
@@ -64,4 +65,11 @@ button {
     border-bottom: 2px solid #bbb;
     border-radius: 4px;
 }
-    
+ 
+img:hover {
+    cursor: pointer;
+}
+
+.delete {
+    margin-left: 1em;
+}

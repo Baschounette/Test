@@ -44,5 +44,7 @@ export class UserService {
     return this.http.delete('http://localhost:8080/users/deleteUser/' + user.id) 
   }
 
-  
+  userValidateByAdminFromService(user: User){
+    return this.http.get('http://localhost:8080/users/userValidateByAdmin?id=' + user.id)
+  }
 }
