@@ -18,7 +18,7 @@ export class SidebarComponent implements OnInit {
   public isDisplayUsers = true;
   public isDisplayReservation = false;
 
-  public isAdmin = false;
+  public isAdmin = true;
   
 
   constructor (private userService: UserService) { }
