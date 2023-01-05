@@ -24,7 +24,9 @@ export class SidebarComponent implements OnInit {
   constructor (private userService: UserService) { }
 
   ngOnInit(): void {
-    this.isAdmin = this.userService.isAdmin
+    if (localStorage.getItem("Role") === "admin") {
+      this.isAdmin = true
+    }
   }
 
   changeButton() {

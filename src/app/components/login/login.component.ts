@@ -1,4 +1,4 @@
-import { Component, OnInit, resolveForwardRef } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
@@ -26,14 +26,14 @@ export class LoginComponent implements OnInit {
       console.log(res)
       if(res == 1) {
         this.userService.getInfoForLoggedFromService(user).subscribe((res) => {
-          this.userService.userLogged = res  
-          if(this.userService.userLogged.role === "admin"){
-            this.userService.isAdmin = true
-          } else {
-            this.userService.isAdmin = false
-          }      
+          localStorage.setItem("Name", res.name)
+          localStorage.setItem("Role", res.role)
+          localStorage.setItem("Connecté ?", "Connecté")
         })
         this.router.navigate(["sidebar"])
+        setTimeout(() => {
+          location.reload()
+        }, 100);
       } else if(res == 2) {
         console.log("Pas encore validé, dommage :'(")
         this.loginNotValidate = true;
