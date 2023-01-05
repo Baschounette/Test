@@ -16,14 +16,11 @@ h1, h2 {
     font-weight: 500;
 }
 
-h2 {
-    margin-top: 1em;
-}
-
 .searchBox {
     margin: 2em auto 2em auto;
-    width: 80%;
-    height: 150px;
+    width: max-content;
+    padding: 1em;
+    height: 200px;
     background: #28292d;
     border: 2px solid #1c1c1c;
     border-radius: 4px;
@@ -36,6 +33,16 @@ h2 {
     margin-top: 1em;
 }
 
+form {
+    display: flex;
+    align-items: center;
+}
+
+form img {
+    margin-left: 0.25em;
+    cursor: pointer;
+}
+
 input[type="text"] {
     background: #45f3ff;
     border-radius: 4px;
@@ -46,19 +53,43 @@ input[type="text"] {
 input[type="number"] {
     background: orange;
     border-radius: 4px;
-    width: 200px;
+    width: 100px;
     height: 40px;
 }
 
-input::placeholder {
+input[type="text"]::placeholder, input[type="text"]::content,
+input[type="number"]::placeholder, input[type="number"]::content {
     font-weight: 500;
     letter-spacing: 0.1em;
-    font-size: 1em;
     color: #28292d;
 }
 
-input::content {
+input[type="text"]::content, input[type="number"]::content {
     padding-left: 1em;
+}
+
+.filter {
+    display: grid;
+	grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+	color: #8f8f8f;
+}
+
+input[type="radio"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    margin-top: 0.25em;
+	border-radius: 5px;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #45f3ff;
+	transition: 0.2s all linear;
+	cursor: pointer;
+}
+
+input[type="radio"]:checked {
+	background-color: #ff7b00;
 }
 
 /* Partie data  */

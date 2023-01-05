@@ -39,9 +39,8 @@ export class ProductService {
     return this.http.get('http://localhost:8080/products/productOrderByNameDesc') as Observable<Product[]>  
   }
 
-  getProductByTypeFromService(filters: NgForm): Observable<Product[]> {
-    let searchByType = filters.value.filter
-    return this.http.get('http://localhost:8080/products/type/' + searchByType) as Observable<Product[]>
+  getProductByTypeFromService(filters: String): Observable<Product[]> {
+    return this.http.get('http://localhost:8080/products/type/' + filters) as Observable<Product[]>
   }
 
   getAllProductOrderByPriceAscFromService(): Observable<Product[]> {

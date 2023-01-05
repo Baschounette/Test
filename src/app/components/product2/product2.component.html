@@ -3,14 +3,58 @@
     <div class="searchBox">
         <h2>Rechercher par : </h2>
         <div class="search">
-            <form>
-                <input type="text" name="name" required autocomplete="off" placeholder="Veuillez Saisir un nom">
+            <form (ngSubmit)="searchByName(name)" #name="ngForm">
+                <input type="text" name="searchName" autocomplete="off" placeholder="Veuillez Saisir un nom" ngModel required>
+                <button type="submit"><img src="../assets/images/logos/rechercher.png"></button>
             </form>
-            <form>
-                <input type="number" name="min" placeholder="min" autocomplete="off">
+            <form (ngSubmit)="searchByPrice(price)" #price="ngForm">
+                <input type="number" name="price1" placeholder="min" autocomplete="off" ngModel required>
                 &nbsp;
-                <input type="number" name="max" placeholder="max" autocomplete="off">
+                <input type="number" name="price2" placeholder="max" autocomplete="off" ngModel required>
+                <button type="submit"><img src="../assets/images/logos/rechercher.png"></button>
             </form>
+            <div class="filter">
+                <label>
+                    <p>Ordre a_Z</p>
+                    <input type="radio" name="type" (click)="searchByAsc()">
+                </label>
+                <label>
+                    <p>Ordre Z_a</p>
+                    <input type="radio" name="type" (click)="searchBydesc()">
+                </label>
+                <label>
+                    <p>Prix Asc</p>
+                    <input type="radio" name="type" (click)="searchByPriceAsc()">
+                </label>
+                <label>
+                    <p>Prix Desc</p>
+                    <input type="radio" name="type" (click)="searchByPriceDesc()">
+                </label>
+                <label>
+                    <p>Mage</p>
+                    <input type="radio" name="type" (click)="searchByMage()">
+                </label>
+                <label>
+                    <p>Combattant</p>
+                    <input type="radio" name="type" (click)="searchByFighter()">
+                </label>
+                <label>
+                    <p>Assassin</p>
+                    <input type="radio" name="type" (click)="searchByAssassin()">
+                </label>
+                <label>
+                    <p>Tank</p>
+                    <input type="radio" name="type" (click)="searchByTank()">
+                </label>
+                <label>
+                    <p>Support</p>
+                    <input type="radio" name="type" (click)="searchBySupport()">
+                </label>
+                <label>
+                    <p>Tireur</p>
+                    <input type="radio" name="type" (click)="searchByShooter()">
+                </label>
+            </div>
         </div>
     </div>
     <div class="cardGlobal">

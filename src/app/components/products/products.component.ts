@@ -44,7 +44,7 @@ export class ProductsComponent implements OnInit {
   searchFilters(filters: NgForm){
     if(filters.value.filter === 'Mage' || filters.value.filter === 'Assassin' || filters.value.filter === 'Tireur'
      || filters.value.filter === 'Tank' || filters.value.filter === 'Combattant' || filters.value.filter === 'Support') {
-      this.productService.getProductByTypeFromService(filters).subscribe((res: Product[]) => {
+      this.productService.getProductByTypeFromService("filters").subscribe((res: Product[]) => {
         this.products = res;
       }) 
     } else if (filters.value.filter === 'Ordre Alphabétique'){
