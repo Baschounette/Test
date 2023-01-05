@@ -1,0 +1,33 @@
+<div class="global">
+    <h1>Liste des champions de LOL : </h1>
+    <div class="searchBox">
+        <h2>Rechercher par : </h2>
+        <div class="search">
+            <form>
+                <input type="text" name="name" required autocomplete="off" placeholder="Veuillez Saisir un nom">
+            </form>
+            <form>
+                <input type="number" name="min" placeholder="min" autocomplete="off">
+                &nbsp;
+                <input type="number" name="max" placeholder="max" autocomplete="off">
+            </form>
+        </div>
+    </div>
+    <div class="cardGlobal">
+        <div *ngFor="let product of products">
+            <div class="card">
+                <img src="{{product.image}}">
+                <div class="details">
+                    <h2>{{product.name}}</h2>
+                    <h3>{{product.type}}</h3>
+                    <p>{{product.lore}}</p>
+                </div>
+                <div class="price">
+                    <h3>{{product.price}} RP</h3>
+                    <h3>{{product.available}}</h3>
+                </div>
+                <button>Ajouter au panier</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.global {
+    margin-top: 2em;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #45f3ff;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+h2 {
+    margin-top: 1em;
+}
+
+.searchBox {
+    margin: 2em auto 2em auto;
+    width: 80%;
+    height: 150px;
+    background: #28292d;
+    border: 2px solid #1c1c1c;
+    border-radius: 4px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+input[type="text"] {
+    background: #45f3ff;
+    border-radius: 4px;
+    width: 200px;
+    height: 40px;
+}
+
+input[type="number"] {
+    background: orange;
+    border-radius: 4px;
+    width: 200px;
+    height: 40px;
+}
+
+input::placeholder {
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+    color: #28292d;
+}
+
+input::content {
+    padding-left: 1em;
+}
+
+/* Partie data  */
+.cardGlobal {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: auto;
+}
+
+.card {
+    margin-bottom: 1em;
+}
+
+/* Stylisation de l'input type number pour empecher les boutons d'incrémentations
+ */
+ /* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

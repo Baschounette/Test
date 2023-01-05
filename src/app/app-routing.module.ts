@@ -7,10 +7,14 @@ import { ProductsComponent } from './components/products/products.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SidebarComponent } from './components/Logged/sidebar/sidebar.component';
 import { AppComponent } from './app.component';
+import { ProductComponent } from './components/product/product.component';
+import { Product2Component } from './components/product2/product2.component';
 
 const routes: Routes = [
   { path: 'homepage', component: HomepageComponent},
   { path: 'products', component: ProductsComponent},
+  { path: 'product', component: ProductComponent},
+  { path: 'product2', component: Product2Component},
   { path: 'login', component: LoginComponent},
   { path: 'addProduct', component: AddProductComponent},
   { path: 'register', component: RegisterComponent},

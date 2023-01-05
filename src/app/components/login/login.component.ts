@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
+import { SidebarComponent } from '../Logged/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-login',
@@ -30,7 +31,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem("Role", res.role)
           localStorage.setItem("Connecté ?", "Connecté")
         })
-        this.router.navigate(["sidebar"])
+        this.router.navigate(["sidebar"]);
         setTimeout(() => {
           location.reload()
         }, 100);

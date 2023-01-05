@@ -24,6 +24,8 @@ import { ReservationComponent } from './components/Logged/reservation/reservatio
 import {MatSelectModule} from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import { ProductComponent } from './components/product/product.component';
+import { Product2Component } from './components/product2/product2.component';
 
 
 @NgModule({
@@ -43,6 +45,8 @@ import {MatIconModule} from '@angular/material/icon';
     SupportComponent,
     UsersComponent,
     ReservationComponent,
+    ProductComponent,
+    Product2Component,
   ],
   imports: [
     BrowserModule,
