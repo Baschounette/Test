@@ -24,6 +24,7 @@ import { ReservationComponent } from './components/Logged/reservation/reservatio
 import {MatSelectModule} from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import { UsersChangeComponent } from './components/templates/users-change/users-change.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import {MatIconModule} from '@angular/material/icon';
     SupportComponent,
     UsersComponent,
     ReservationComponent,
+    UsersChangeComponent,
   ],
   imports: [
     BrowserModule,

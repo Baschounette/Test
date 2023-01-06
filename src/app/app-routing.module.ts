@@ -7,6 +7,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SidebarComponent } from './components/Logged/sidebar/sidebar.component';
 import { AppComponent } from './app.component';
+import { UsersChangeComponent } from './components/templates/users-change/users-change.component';
+
 
 const routes: Routes = [
   { path: 'homepage', component: HomepageComponent},
@@ -16,6 +18,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'sidebar', component: SidebarComponent},
   { path: '', component: AppComponent},
+  { path: 'usersChange', component: UsersChangeComponent},
 ];
 
 @NgModule({
