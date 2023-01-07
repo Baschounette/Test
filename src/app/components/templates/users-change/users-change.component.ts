@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-users-change',
   templateUrl: './users-change.component.html',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class UsersChangeComponent {
   
+  ngOnDestroy(){
+    modalClose(){
+      
+    }
+  }
 }
