@@ -23,7 +23,7 @@
                 <div class="cellules"> {{User.mail}} </div>
                 <div class="cellules"> {{User.role}} </div>
                 <div class="cellules">
-                    <img src="../assets/images/logos/crayon24.png">
+                    <img src="../assets/images/logos/crayon24.png" (click)="userChange()">
                     <img src="../assets/images/logos/remove24.png" (click)="deleteUsers(User)" class="delete">
                 </div>
             </div>
@@ -41,7 +41,9 @@
                 </div>
             </div>
         </div>
-    
-    </div>
-    
+    </div>    
+</div>
+
+<div class="modale">
+    <app-users-change *ngIf="usersChange"></app-users-change>
 </div>

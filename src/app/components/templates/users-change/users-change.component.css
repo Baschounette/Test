@@ -2,8 +2,8 @@
     margin-left: auto;
     margin-right: auto;
 	position: relative;
-	width: 500px;
-	height: 580px;
+	width: 30vw;
+	height: 64vh;
 	background: #1c1c1c;
 	border-radius: 8px;
 	overflow: hidden;
@@ -148,3 +148,10 @@ h2 {
     background-color: #e31212;
 }
 
+.closeForm {
+	position: fixed;
+	right: 36%;
+	background-color: red;
+	color: white;
+	border-radius: 4px;
+}
