@@ -10,8 +10,5 @@ import { Component } from '@angular/core';
 export class UsersChangeComponent {
   
   ngOnDestroy(){
-    modalClose(){
-      
-    }
   }
 }
