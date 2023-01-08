@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 
 
@@ -7,8 +8,15 @@ import { Component } from '@angular/core';
   templateUrl: './users-change.component.html',
   styleUrls: ['./users-change.component.css']
 })
-export class UsersChangeComponent {
-  
-  ngOnDestroy(){
+export class UsersChangeComponent implements OnInit {
+
+  constructor(private userService: UserService){}
+
+  ngOnInit(): void {
+      
+  }
+
+  formClose(){
+    this.userService.userChange = false;
   }
 }

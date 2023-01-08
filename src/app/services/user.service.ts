@@ -10,6 +10,8 @@ import { User } from '../models/user.model';
 
 export class UserService {
 
+  public userChange = false;
+
   constructor(private http:HttpClient) { }
 
   addUserFromService(user: User){

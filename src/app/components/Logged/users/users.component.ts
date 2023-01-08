@@ -16,7 +16,6 @@ export class UsersComponent implements OnInit {
   public usersNotValidate: User[] | undefined; 
   public validate = false;
   public text = true;
-  public usersChange = false;
   
   constructor(private userService: UserService, private router : Router) { }
   
@@ -67,6 +66,6 @@ export class UsersComponent implements OnInit {
   }
 
   userChange(){
-    this.usersChange = true;
+    this.userService.userChange = true;
   }
 }
