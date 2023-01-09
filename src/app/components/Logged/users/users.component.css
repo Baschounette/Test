@@ -73,3 +73,11 @@ img:hover {
 .delete {
     margin-left: 1em;
 }
+
+.modale{
+    position: fixed;
+    top: 18%;
+    left: 35%;
+    z-index: 999;
+    overflow: auto;
+}

@@ -12,5 +12,6 @@
         <li><button *ngIf="!connected" routerLink="login" type="button">Se connecter</button></li>
         <li><button *ngIf="!connected" routerLink="register" type="button">S'inscrire</button></li>
         <li><button *ngIf="connected" (click)="deconnect()" type="button">Se Déconnecter</button></li>
+        <li><button routerLink="usersChange" type="button">Modification utilisateur</button></li>
     </div>
 </ul>

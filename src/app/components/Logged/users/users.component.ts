@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
 import { __values } from 'tslib';
@@ -15,7 +16,10 @@ export class UsersComponent implements OnInit {
   public usersNotValidate: User[] | undefined; 
   public validate = false;
   public text = true;
-  constructor(private userService: UserService) { }
+  public userChanges = false;
+  public usersValidateFilterById: User;
+  
+  constructor(private userService: UserService, private router : Router) { }
   
   ngOnInit(): void {
     this.getAllUser();
@@ -61,5 +65,14 @@ export class UsersComponent implements OnInit {
       this.ngOnInit();
       location.reload()
     })
+  }
+
+  userChangeOpenModale(userValidate: User){
+    this.usersValidateFilterById = this.usersValidate?.filter((u) => u.id === userValidate.id)
+    this.userChanges = true;
+  }
+
+  closeModale(event: boolean){
+    this.userChanges = event;
   }
 }

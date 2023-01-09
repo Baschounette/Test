@@ -14,5 +14,4 @@ export class AppComponent implements OnDestroy {
     localStorage.removeItem("Role")
     localStorage.removeItem("Connecté ?")
   }
-
 }
