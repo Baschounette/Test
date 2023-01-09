@@ -31,6 +31,7 @@ export class Product2Component implements OnInit {
     this.productService.searchByNameFromService(name).subscribe((res: Product[]) => {
       this.products = res;
     })
+    // this.products = this.productsBuffer; this.products = this.products.filter(function(filtre) {return filtre.name == name.value});
   }
 
   searchByPrice(price: NgForm){
