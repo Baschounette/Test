@@ -16,6 +16,8 @@ export class UsersComponent implements OnInit {
   public usersNotValidate: User[] | undefined; 
   public validate = false;
   public text = true;
+  public userChanges = false;
+  public usersValidateFilterById: User;
   
   constructor(private userService: UserService, private router : Router) { }
   
@@ -65,7 +67,12 @@ export class UsersComponent implements OnInit {
     })
   }
 
-  userChange(){
-    this.userService.userChange = true;
+  userChangeOpenModale(userValidate: User){
+    this.usersValidateFilterById = this.usersValidate?.filter((u) => u.id === userValidate.id)
+    this.userChanges = true;
+  }
+
+  closeModale(event: boolean){
+    this.userChanges = event;
   }
 }
