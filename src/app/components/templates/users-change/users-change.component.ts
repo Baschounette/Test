@@ -9,9 +9,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./users-change.component.css']
 })
 export class UsersChangeComponent implements OnInit {
-
-  @Input() usersValidateFilterById: User | undefined
   
+  @Input() usersValidateFilterByUser!: User[];
+  public userChanged!: User;
+
   @Output() closeModale: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private userService: UserService){}
@@ -24,12 +25,14 @@ export class UsersChangeComponent implements OnInit {
   }
 
   userChange(user: NgForm){
-    console.log(user);
-    this.usersValidateFilterById.
-    this.userService.userChangeFromService(user.value).subscribe(res => {
+    this.userChanged = this.usersValidateFilterByUser.at(0)!;
+    this.userChanged.name = user.value.name
+    this.userChanged.password = user.value.password
+    this.userChanged.mail = user.value.mail
+    this.userChanged.role = user.value.role
+    this.userService.userChangeFromService(this.userChanged).subscribe(res => {
       this.userChangesCloseModale();
       console.log(res);
-      
     })
   }
 }

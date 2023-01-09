@@ -11,13 +11,13 @@ import { __values } from 'tslib';
 })
 export class UsersComponent implements OnInit {
   
-  public users: User[] | undefined;
-  public usersValidate: User[] | undefined;
-  public usersNotValidate: User[] | undefined; 
+  public users!: User[];
+  public usersValidate!: User[];
+  public usersNotValidate!: User[] 
   public validate = false;
   public text = true;
   public userChanges = false;
-  public usersValidateFilterById: User;
+  public usersValidateFilterByUser!: User[]
   
   constructor(private userService: UserService, private router : Router) { }
   
@@ -67,8 +67,8 @@ export class UsersComponent implements OnInit {
     })
   }
 
-  userChangeOpenModale(userValidate: User){
-    this.usersValidateFilterById = this.usersValidate?.filter((u) => u.id === userValidate.id)
+  userChangeOpenModale(user: User){
+    this.usersValidateFilterByUser = this.usersValidate?.filter((u) => u.id === user.id)!
     this.userChanges = true;
   }
 

@@ -2,7 +2,7 @@
     <form (ngSubmit)="userChange(user)" #user="ngForm" autocomplete="off">
         <button class="closeForm" (click)="userChangesCloseModale()">x</button>
         <h2>Modification Utilisateur</h2>
-        <div *ngFor="let user of usersValidateFilterById">
+        <div *ngFor="let user of usersValidateFilterByUser">
             <div class="inputName">
                 <input autocomplete="off" type="text" name="name" minlength="4" maxlength="16" ngModel required>
                 <span>  {{user.name}} </span>
