@@ -10,7 +10,8 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class Product2Component implements OnInit {
 
-  public products: Product[] | undefined;
+  public products!: Product[];
+  public productsBuffer!: Product[];
   public filters: String = '';
 
   constructor(private productService: ProductService) { }
@@ -22,6 +23,7 @@ export class Product2Component implements OnInit {
   getAllProduct(){
     this.productService.getAllProductFromService().subscribe((res: Product[]) => {
       this.products = res;
+      this.productsBuffer = res;
     })
   }
 
@@ -37,63 +39,78 @@ export class Product2Component implements OnInit {
     })
   }
 
-  searchByAsc() {
-    this.productService.getAllProductOrderByAscFromService().subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
-  }
-  searchBydesc() {
-    this.productService.getAllProductOrderByDescFromService().subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
-  }
-  searchByPriceAsc() {
-    this.productService.getAllProductOrderByPriceAscFromService().subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
-  }
-  searchByPriceDesc() {
-    this.productService.getAllProductOrderByPriceDescFromService().subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
+  searchByType(filter: String) {
+    switch(filter) {
+      case 'Mage': this.products = this.productsBuffer; this.products = this.products.filter((p) => p.type === 'Mage'); break;
+      case 'Combattant': this.products = this.productsBuffer; this.products = this.products.filter((p) => p.type === 'Combattant'); break;
+      case 'Assassin': this.products = this.productsBuffer; this.products = this.products.filter((p) => p.type === 'Assassin'); break;
+      case 'Tank': this.products = this.productsBuffer; this.products = this.products.filter((p) => p.type === 'Tank'); break;
+      case 'Support': this.products = this.productsBuffer; this.products = this.products.filter((p) => p.type === 'Support'); break;
+      case 'Tireur': this.products = this.productsBuffer; this.products = this.products.filter((p) => p.type === 'Tireur'); break;
+      case 'a_Z': this.products = this.productsBuffer; this.products = this.products.sort(function (a, b) {return a.name.localeCompare(b.name)}); break;
+      case 'Z_a': this.products = this.productsBuffer; this.products = this.products.sort(function (a, b) {return b.name.localeCompare(a.name)}); break;
+      case 'Asc': this.products = this.productsBuffer; this.products = this.products.sort(function (a, b) {return a.price - b.price}); break;
+      case 'Desc': this.products = this.productsBuffer; this.products = this.products.sort(function (a, b) {return b.price - a.price}); break;
+    }
   }
   
-  searchByMage() {
-    this.filters = "Mage"
-    this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
-  }
-  searchByFighter() {
-    this.filters = "Combattant"
-    this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
-  }
-  searchByAssassin() {
-    this.filters = "Assassin"
-    this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
-  }
-  searchByTank() {
-    this.filters = "Tank"
-    this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
-  }
-  searchBySupport() {
-    this.filters = "Support"
-    this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
-  }
-  searchByShooter() {
-    this.filters = "Tireur"
-    this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
-      this.products = res;
-    }) 
-  }
+  // searchByMage() {
+  //   this.filters = "Mage"
+  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
+  //     this.products = res;
+  //   }) 
+  // }
+  // searchByFighter() {
+  //   this.filters = "Combattant"
+  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
+  //     this.products = res;
+  //   }) 
+  // }
+  // searchByAssassin() {
+  //   this.filters = "Assassin"
+  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
+  //     this.products = res;
+  //   }) 
+  // }
+  // searchByTank() {
+  //   this.filters = "Tank"
+  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
+  //     this.products = res;
+  //   }) 
+  // }
+  // searchBySupport() {
+  //   this.filters = "Support"
+  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
+  //     this.products = res;
+  //   }) 
+  // }
+  // searchByShooter() {
+  //   this.filters = "Tireur"
+  //   this.productService.getProductByTypeFromService(this.filters).subscribe((res: Product[]) => {
+  //     this.products = res;
+  //   }) 
+  // }
+  // searchByAsc() {
+  //   this.productService.getAllProductOrderByAscFromService().subscribe((res: Product[]) => {
+  //     this.products = res;
+  //   }) 
+  // }
+  // searchBydesc() {
+  //   this.productService.getAllProductOrderByDescFromService().subscribe((res: Product[]) => {
+  //     this.products = res;
+  //   }) 
+  // }
+  // searchByPriceAsc() {
+  //   this.productService.getAllProductOrderByPriceAscFromService().subscribe((res: Product[]) => {
+  //     this.products = res;
+  //   }) 
+  // }
+  // searchByPriceDesc() {
+  //   this.productService.getAllProductOrderByPriceDescFromService().subscribe((res: Product[]) => {
+  //     this.products = res;
+  //     this.products = this.products.sort()
+  //   }) 
+  // }
   
 
 }
