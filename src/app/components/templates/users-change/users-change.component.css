@@ -9,6 +9,7 @@
 	overflow: hidden;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+	overflow-y: scroll;
 }
 
 form {
@@ -149,9 +150,11 @@ h2 {
 }
 
 .closeForm {
-	position: fixed;
-	right: 36%;
+	position: absolute;
+	right: 1em;
+	top: 1em;
 	background-color: red;
 	color: white;
 	border-radius: 4px;
+	cursor: pointer;
 }

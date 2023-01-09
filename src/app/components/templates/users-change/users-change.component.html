@@ -1,35 +1,32 @@
 <div class="userChange">
-    <form>
-        <button class="closeForm" (click)="formClose()">x</button>
+    <form (ngSubmit)="userChange(user)" #user="ngForm" autocomplete="off">
+        <button class="closeForm" (click)="userChangesCloseModale()">x</button>
         <h2>Modification Utilisateur</h2>
-        <div class="inputName">
-            <input autocomplete="off" type="text" name="name" minlength="4" maxlength="16" ngModel required>
-            <span> Nom du champion </span>
-            <i></i>
+        <div *ngFor="let user of usersValidateFilterById">
+            <div class="inputName">
+                <input autocomplete="off" type="text" name="name" minlength="4" maxlength="16" ngModel required>
+                <span>  {{user.name}} </span>
+                <i></i>
+            </div>
+            <div class="inputPassword">
+                <input autocomplete="off" type="password" name="password" ngModel required>
+                <span> {{user.password}} </span> 
+                <i></i>
+            </div>
+            <div class="inputMail">
+                <input autocomplete="off" type="email" name="mail" ngModel required>
+                <span> {{user.mail}} </span> 
+                <i></i>
+            </div>
+            <div class="inputRole">
+                <input autocomplete="off" type="text" name="role" ngModel required>
+                <span> {{user.role}} </span> 
+                <i></i>
+            </div>
         </div>
-
-        <div class="inputPassword">
-            <input autocomplete="off" type="password" name="password" ngModel required>
-            <span> Mot de passe </span> 
-            <i></i>
-        </div>
-
-        <div class="inputMail">
-            <input autocomplete="off" type="email" name="mail" ngModel required>
-            <span> Adresse mail </span> 
-            <i></i>
-        </div>
-
-        <div class="inputRole">
-            <input autocomplete="off" type="text" name="role" ngModel required>
-            <span> Rôle </span> 
-            <i></i>
-        </div>
-    
         <div>
             <button class="finalButton" type="submit">Modifier</button>
         </div>
-
     </form>
 </div>
 

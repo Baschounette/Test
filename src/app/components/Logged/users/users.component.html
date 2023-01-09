@@ -23,7 +23,7 @@
                 <div class="cellules"> {{User.mail}} </div>
                 <div class="cellules"> {{User.role}} </div>
                 <div class="cellules">
-                    <img src="../assets/images/logos/crayon24.png" (click)="userChange()">
+                    <img src="../assets/images/logos/crayon24.png" (click)="userChangeOpenModale(User)">
                     <img src="../assets/images/logos/remove24.png" (click)="deleteUsers(User)" class="delete">
                 </div>
             </div>
@@ -45,5 +45,5 @@
 </div>
 
 <div class="modale">
-    <app-users-change *ngIf="userChange"></app-users-change>
+    <app-users-change *ngIf="userChanges" (closeModale)="closeModale($event)" [usersValidateFilterById]="usersValidateFilterById"></app-users-change>
 </div>

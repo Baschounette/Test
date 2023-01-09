@@ -10,8 +10,6 @@ import { User } from '../models/user.model';
 
 export class UserService {
 
-  public userChange = false;
-
   constructor(private http:HttpClient) { }
 
   addUserFromService(user: User){
@@ -48,5 +46,9 @@ export class UserService {
 
   userValidateByAdminFromService(user: User){
     return this.http.get('http://localhost:8080/users/userValidateByAdmin?id=' + user.id)
+  }
+
+  userChangeFromService(user: User){
+    return this.http.post('http://localhost:8080/users/userChange', user)
   }
 }
