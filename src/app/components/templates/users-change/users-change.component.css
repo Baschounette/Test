@@ -148,7 +148,8 @@ h2 {
 }
 
 .inputName input:valid ~ i,
-.inputName input:focus ~ i {
+.inputName input:focus ~ i
+ {
 	height: 44px;
 	background: #a44179;
 }

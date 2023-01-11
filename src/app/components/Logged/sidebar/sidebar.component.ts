@@ -10,12 +10,12 @@ import { UserService } from 'src/app/services/user.service';
 
 export class SidebarComponent implements OnInit {
 
-  public isDisplayProfil = false;
+  public isDisplayProfil = true;
   public isDisplayMyReservation = false;
   public isDisplaySupport = false;
   public isDisplayAdmin = false;
   public isDisplayAddProduct = false;
-  public isDisplayUsers = true;
+  public isDisplayUsers = false;
   public isDisplayReservation = false;
 
   public isAdmin = true;
